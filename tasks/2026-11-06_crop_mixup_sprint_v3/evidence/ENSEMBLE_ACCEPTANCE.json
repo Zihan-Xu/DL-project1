@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "completed_verified": 3,
+  "planned_runs": 3,
+  "parameters": 4872692,
+  "new_configuration": "crop_mixup",
+  "new_policy": "tta",
+  "reference_configuration": "long_111",
+  "reference_policy": "tta",
+  "mixture_weights": [
+    0.5,
+    0.5
+  ],
+  "mean_accuracy": 0.9633333333333334,
+  "sd": 0.00030550504633041625,
+  "paired_delta_pp": 0.29333333333333333,
+  "paired_ci95_pp": [
+    -0.12921355038661986,
+    0.7158802170532865
+  ],
+  "recommended": true,
+  "runs": [
+    {
+      "seed": 142,
+      "old_correct": 4803,
+      "new_correct": 4787,
+      "combined_correct": 4818,
+      "n": 5000,
+      "parameters": 4872692,
+      "passed": true,
+      "new_checkpoint_sha256": "b183a446b689a7653320c9b2f1a744f811cbbbd48057fb2e9fd352fcbcd5b563",
+      "reference_checkpoint_sha256": "d0e4eb41adbc6582a8d9fa6e051de340a964d544708534a76da4323952995cf3",
+      "max_abs_error": 1.2814998626708984e-06,
+      "elapsed_seconds": 85.0999953999999,
+      "probabilities_sha256": "42bb55d4659067e4d719ad59c3c97895d36fef3830e1091acf6071ceaf63a137"
+    },
+    {
+      "seed": 143,
+      "old_correct": 4794,
+      "new_correct": 4786,
+      "combined_correct": 4817,
+      "n": 5000,
+      "parameters": 4872692,
+      "passed": true,
+      "new_checkpoint_sha256": "8f1f40216b750ecdb9428cd2702830913b131d3da9428a1bd39ae8dc8f650150",
+      "reference_checkpoint_sha256": "5b8966d786a333a94fb147f29367526e0b4921d888ef79e2a46230f9f3a33a84",
+      "max_abs_error": 1.4901161193847656e-06,
+      "elapsed_seconds": 80.63820380001562,
+      "probabilities_sha256": "e34e93fd954c88b32f7eb639c5acab251886ceff167f623758b26c256d85164f"
+    },
+    {
+      "seed": 144,
+      "old_correct": 4809,
+      "new_correct": 4794,
+      "combined_correct": 4815,
+      "n": 5000,
+      "parameters": 4872692,
+      "passed": true,
+      "new_checkpoint_sha256": "c3fdca5622a9d5734bd28cf2b95832671ac4f0029529a3167725650537822730",
+      "reference_checkpoint_sha256": "5feb85e04bc0e69a55e7d7f2a07eca2d93a6d709895bfb089bb01bb1c488831c",
+      "max_abs_error": 1.430511474609375e-06,
+      "elapsed_seconds": 78.0897144000046,
+      "probabilities_sha256": "d1d34ae4bf0e9858e91a7cc6e202e9980abe26a36a1ebbe7448731131d4736b1"
+    }
+  ],
+  "plan_sha256": "271ba7cd8a710a6f9d920305163b90871f2bfee72b0b73521a64e1ad2bb9c737",
+  "validated_at_utc": "2026-11-07T04:29:22.158105+00:00",
+  "official_kaggle_score": null
+}

@@ -1,0 +1,31 @@
+{
+  "version": "00_RECOMMENDED_dual_residual_full50k",
+  "policy": "equal-weight new tta + reference tta",
+  "configuration": "dual_residual",
+  "new_candidate": true,
+  "ensemble": true,
+  "recommended": true,
+  "seed": 42,
+  "training_images": 50000,
+  "epochs": "80 + 240",
+  "parameters": 4872692,
+  "model_sha256": "a3ca08bf0ba84b97714dd2b07b6d247b63231461c5d84b4088165731e6f56ec9",
+  "model_path": "tasks/2026-11-06_crop_mixup_sprint_v3/ensemble.pt",
+  "config_sha256": "ffb001d5fd86f8c3c4d23054ec1802e77a35574c1e36775ac7830197d127f590",
+  "config_path": "tasks/2026-11-06_crop_mixup_sprint_v3/evidence/ensemble_config.json",
+  "kaggle_score": null,
+  "rows": 2000,
+  "csv_sha256": "dfc143deda46bd7fb9ea7f534a5322d6ea06a7417295c008e11b0ecae03fb434",
+  "label_counts": {
+    "0": 181,
+    "1": 212,
+    "2": 205,
+    "3": 215,
+    "4": 202,
+    "5": 200,
+    "6": 182,
+    "7": 202,
+    "8": 201,
+    "9": 200
+  }
+}

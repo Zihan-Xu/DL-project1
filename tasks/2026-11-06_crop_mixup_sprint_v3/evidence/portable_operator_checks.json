@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "augmentation_pixel_exact": true,
+  "full_size_plans": [
+    40000,
+    50000
+  ],
+  "initialization_exact": true,
+  "loss_logits_gradients_exact_steps": 6,
+  "source_sha256": "1e29a96cbf21f755b19594316431e639f6ea318f677dc1ac803179c0440c0348",
+  "portable_sha256": "309efa8dd3af14548a7a13e0cd93dc06120904321fd59d3cc408bc5febad5b77"
+}

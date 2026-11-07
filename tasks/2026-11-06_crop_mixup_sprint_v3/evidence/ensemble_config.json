@@ -1,0 +1,23 @@
+{
+  "parameters": 4872692,
+  "mixture_weights": [
+    0.5,
+    0.5
+  ],
+  "new_configuration": "crop_mixup",
+  "new_policy": "tta",
+  "reference_configuration": "long_111",
+  "reference_policy": "tta",
+  "branch_epochs": [
+    80,
+    240
+  ],
+  "branch_seeds": [
+    42,
+    42
+  ],
+  "training_images_per_branch": 50000,
+  "new_checkpoint_sha256": "8e9f7da5266cc233470b8226326522b07af3530a47b6f1bdd8ee8bbcd05e2ed2",
+  "reference_checkpoint_sha256": "6ffed5a3b60d34ee7da7f1586984b457b91eb2740e9585163130b3e4cfc57b7c",
+  "selection_evidence_sha256": "1a8997d71bc1fc5fd9f27a34f998b8fd3cc2b841317fb6f360a2fddb51657548"
+}

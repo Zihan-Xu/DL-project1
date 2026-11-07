@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "completed_verified": 6,
+  "planned_runs": 6,
+  "validated_at_utc": "2026-11-07T04:25:10.415970+00:00",
+  "manifest_sha256": "2d4e73e2f10c06c91224cd4c53b57edc26a94b7ed35d344f3a9344afc2744631",
+  "auditor_sha256": "f41206408694d6292635c7fbf6bff7db0438406655239f539a17f0b59f167f0b",
+  "artifact_sha256": {
+    "manifest.json": "2d4e73e2f10c06c91224cd4c53b57edc26a94b7ed35d344f3a9344afc2744631",
+    "freeze.json": "20bbe72cfa5210e05d5e19e27a14400f5f3114bdb770950094b30ac81ca8b6b6",
+    "DECISION.json": "d4edcfc4b1d287c590c563baeb390ca13edbe9cb31a6f45df5cd7919c813334d",
+    "COMPARISON.json": "0a248508a28fff3384e25c20b96a0ef86a55daf2bf4d32dd20c771a45517b142",
+    "runs\\crop_seed142\\audit_cpu.json": "a774e6740fe5fa9e0c5a15bab69e5cf86a817e0cfc9125fd536764893cda8469",
+    "runs\\crop_mixup_seed142\\audit_cpu.json": "486533032bfd40d00b3095ac9aebfc52f38f6c7bc85bd775517e7251cc507413",
+    "runs\\crop_seed143\\audit_cpu.json": "12af37b87a3410f75bc6da1460a84a1f07af83987ab7cb7ff9df9b0ef3ab5a50",
+    "runs\\crop_mixup_seed143\\audit_cpu.json": "4401204bf4927f8a0db99508705428725b0010c28e57a350d3e212d5279eae75",
+    "runs\\crop_seed144\\audit_cpu.json": "0cff40c6a75bbb7be91f60fea5942ed1a37ad950603726f861f7ae3b63ab2007",
+    "runs\\crop_mixup_seed144\\audit_cpu.json": "f2d506e093b482321e4d3968a8be6ecc4055adba71537636aea6b469494eee93"
+  }
+}

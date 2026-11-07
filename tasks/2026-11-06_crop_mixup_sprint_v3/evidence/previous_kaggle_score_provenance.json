@@ -1,0 +1,16 @@
+{
+  "recorded_at_utc": "2026-11-07T03:16:13.076641+00:00",
+  "source": "User-reported score from Kaggle submissions page",
+  "submission_page": "https://www.kaggle.com/competitions/cifar-10-res-net-architecture-challenge-dl/submissions#",
+  "configuration": "long_111",
+  "inference_policy": "tta",
+  "training_images": 50000,
+  "epochs": 240,
+  "seed": 42,
+  "parameters": 2436346,
+  "reported_kaggle_score": 0.879,
+  "local_csv_sha256": "f25fd0618bf2784593ca29a875839eb6e08160a58db66adf7f9c02afc5c31996",
+  "remote_uploaded_file_bytes_independently_verified": false,
+  "remote_score_page_independently_verified": false,
+  "release_association_basis": "User confirmed this score in reply to the final full50k CSV recommendation"
+}

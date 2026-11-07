@@ -1,0 +1,139 @@
+{
+  "summaries": [
+    {
+      "configuration": "control",
+      "policy": "raw",
+      "n": 3,
+      "mean_accuracy": 0.9482666666666667,
+      "sd": 0.0015534906930308038,
+      "seeds": [
+        0.947,
+        0.9478,
+        0.95
+      ]
+    },
+    {
+      "configuration": "control",
+      "policy": "tta",
+      "n": 3,
+      "mean_accuracy": 0.9523333333333333,
+      "sd": 0.001331665623695896,
+      "seeds": [
+        0.9508,
+        0.9532,
+        0.953
+      ]
+    },
+    {
+      "configuration": "crop",
+      "policy": "raw",
+      "n": 3,
+      "mean_accuracy": 0.9522,
+      "sd": 0.0011135528725660015,
+      "seeds": [
+        0.952,
+        0.9534,
+        0.9512
+      ]
+    },
+    {
+      "configuration": "crop",
+      "policy": "tta",
+      "n": 3,
+      "mean_accuracy": 0.9566,
+      "sd": 0.0018330302779823522,
+      "seeds": [
+        0.9586,
+        0.955,
+        0.9562
+      ]
+    },
+    {
+      "configuration": "crop_mixup",
+      "policy": "raw",
+      "n": 3,
+      "mean_accuracy": 0.9546666666666667,
+      "sd": 0.0016653327995729095,
+      "seeds": [
+        0.9552,
+        0.956,
+        0.9528
+      ]
+    },
+    {
+      "configuration": "crop_mixup",
+      "policy": "tta",
+      "n": 3,
+      "mean_accuracy": 0.9578000000000001,
+      "sd": 0.0008717797887081023,
+      "seeds": [
+        0.9574,
+        0.9572,
+        0.9588
+      ]
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "candidate": "crop",
+      "reference": "control",
+      "policy": "raw",
+      "mean_delta_pp": 0.39333333333333814,
+      "ci95_low_pp": -0.19939948482630793,
+      "ci95_high_pp": 0.9860661514929843,
+      "p_two_sided": 0.10389797087749501,
+      "p_holm_six_comparisons": 0.311693912632485
+    },
+    {
+      "candidate": "crop",
+      "reference": "control",
+      "policy": "tta",
+      "mean_delta_pp": 0.4266666666666678,
+      "ci95_low_pp": -0.35310464905881317,
+      "ci95_high_pp": 1.2064379823921487,
+      "p_two_sided": 0.14277171645818218,
+      "p_holm_six_comparisons": 0.311693912632485
+    },
+    {
+      "candidate": "crop_mixup",
+      "reference": "control",
+      "policy": "raw",
+      "mean_delta_pp": 0.6400000000000036,
+      "ci95_low_pp": -0.1344774913453044,
+      "ci95_high_pp": 1.4144774913453115,
+      "p_two_sided": 0.07080335337753413,
+      "p_holm_six_comparisons": 0.2832134135101365
+    },
+    {
+      "candidate": "crop_mixup",
+      "reference": "control",
+      "policy": "tta",
+      "mean_delta_pp": 0.5466666666666694,
+      "ci95_low_pp": 0.2158625871443176,
+      "ci95_high_pp": 0.8774707461890212,
+      "p_two_sided": 0.019211726913628255,
+      "p_holm_six_comparisons": 0.11527036148176953
+    },
+    {
+      "candidate": "crop_mixup",
+      "reference": "crop",
+      "policy": "raw",
+      "mean_delta_pp": 0.2466666666666654,
+      "ci95_low_pp": 0.04587620594749439,
+      "ci95_high_pp": 0.44745712738583643,
+      "p_two_sided": 0.03397877834819197,
+      "p_holm_six_comparisons": 0.16989389174095984
+    },
+    {
+      "candidate": "crop_mixup",
+      "reference": "crop",
+      "policy": "tta",
+      "mean_delta_pp": 0.12000000000000159,
+      "ci95_low_pp": -0.39870318241391006,
+      "ci95_high_pp": 0.6387031824139132,
+      "p_two_sided": 0.42442346854802127,
+      "p_holm_six_comparisons": 0.42442346854802127
+    }
+  ],
+  "limitations": "Three seeds on the same repeatedly used validation set; intervals quantify seed variation, not independent data replication. 240-epoch incumbent is a different compute budget. No new Kaggle score."
+}

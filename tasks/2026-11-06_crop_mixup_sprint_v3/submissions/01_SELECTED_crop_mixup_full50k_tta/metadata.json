@@ -1,0 +1,31 @@
+{
+  "version": "01_SELECTED_crop_mixup_full50k_tta",
+  "policy": "tta",
+  "configuration": "crop_mixup",
+  "new_candidate": true,
+  "recommended": false,
+  "selected_within_round": true,
+  "seed": 42,
+  "training_images": 50000,
+  "epochs": 80,
+  "parameters": 2436346,
+  "model_sha256": "8e9f7da5266cc233470b8226326522b07af3530a47b6f1bdd8ee8bbcd05e2ed2",
+  "model_path": "tasks/2026-11-06_crop_mixup_sprint_v3/model.pt",
+  "config_sha256": "1077fbe54d286dd6f116d98477be4e0cd0a9917ec9934f0735546faedfcdc815",
+  "config_path": "tasks/2026-11-06_crop_mixup_sprint_v3/evidence/config.json",
+  "kaggle_score": null,
+  "rows": 2000,
+  "csv_sha256": "65058022b94967818cfc756ea903ce0bec23ab0a4506fb7bff6a7607c6ddd5e7",
+  "label_counts": {
+    "0": 185,
+    "1": 211,
+    "2": 204,
+    "3": 206,
+    "4": 190,
+    "5": 208,
+    "6": 188,
+    "7": 208,
+    "8": 195,
+    "9": 205
+  }
+}

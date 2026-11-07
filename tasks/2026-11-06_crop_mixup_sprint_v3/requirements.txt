@@ -1,0 +1,10 @@
+numpy==2.1.3
+Pillow==11.1.0
+torch==2.11.0
+matplotlib==3.10.0
+pandas==2.2.3
+nbformat==5.10.4
+nbclient==0.10.2
+ipykernel==6.30.1
+scipy==1.15.3
+nbconvert==7.16.6

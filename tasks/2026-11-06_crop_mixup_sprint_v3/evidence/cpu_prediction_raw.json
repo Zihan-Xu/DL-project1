@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "rows": 2000,
+  "unique_ids": 2000,
+  "parameters": 2436346,
+  "policy": "raw",
+  "device": "cpu",
+  "original_pngs_read": 2000,
+  "labels_match_reference": null,
+  "model_sha256": "8e9f7da5266cc233470b8226326522b07af3530a47b6f1bdd8ee8bbcd05e2ed2",
+  "submission_sha256": "44301dba22420ef9314f174e366f7e5b5282df7d28cae361895815d1eb21abf0"
+}

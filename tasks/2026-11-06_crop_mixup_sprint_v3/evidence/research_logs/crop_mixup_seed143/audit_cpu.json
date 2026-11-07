@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "run_id": "crop_mixup_seed143",
+  "checkpoint_sha256": "8f1f40216b750ecdb9428cd2702830913b131d3da9428a1bd39ae8dc8f650150",
+  "auditor_sha256": "f41206408694d6292635c7fbf6bff7db0438406655239f539a17f0b59f167f0b",
+  "n": 5000,
+  "raw_correct": 4780,
+  "tta_correct": 4786,
+  "cpu_gpu_predictions_identical": true,
+  "elapsed_seconds": 43.991421200014884,
+  "checked_at_utc": "2026-11-07T04:06:17.401435+00:00",
+  "raw_max_abs_error": 1.049041748046875e-05,
+  "flip_max_abs_error": 8.463859558105469e-06,
+  "tta_max_abs_error": 2.3245811462402344e-06
+}

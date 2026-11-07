@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "training_images": 50000,
+  "epochs_checked": 80,
+  "parameters": 2436346,
+  "normalization_matches": true
+}

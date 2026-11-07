@@ -1,0 +1,26 @@
+{
+  "01_SELECTED_crop_mixup_full50k_tta": {
+    "01_SELECTED_crop_mixup_full50k_tta": 0,
+    "02_ALTERNATIVE_crop_mixup_full50k_raw": 87,
+    "03_REFERENCE_long111_Kaggle087900": 184,
+    "00_RECOMMENDED_dual_residual_full50k": 113
+  },
+  "02_ALTERNATIVE_crop_mixup_full50k_raw": {
+    "01_SELECTED_crop_mixup_full50k_tta": 87,
+    "02_ALTERNATIVE_crop_mixup_full50k_raw": 0,
+    "03_REFERENCE_long111_Kaggle087900": 194,
+    "00_RECOMMENDED_dual_residual_full50k": 134
+  },
+  "03_REFERENCE_long111_Kaggle087900": {
+    "01_SELECTED_crop_mixup_full50k_tta": 184,
+    "02_ALTERNATIVE_crop_mixup_full50k_raw": 194,
+    "03_REFERENCE_long111_Kaggle087900": 0,
+    "00_RECOMMENDED_dual_residual_full50k": 75
+  },
+  "00_RECOMMENDED_dual_residual_full50k": {
+    "01_SELECTED_crop_mixup_full50k_tta": 113,
+    "02_ALTERNATIVE_crop_mixup_full50k_raw": 134,
+    "03_REFERENCE_long111_Kaggle087900": 75,
+    "00_RECOMMENDED_dual_residual_full50k": 0
+  }
+}

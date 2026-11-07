@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "complete": true,
+  "runs": [
+    {
+      "run_id": "crop_seed142",
+      "epochs_checked": 80,
+      "sampling_existing_augmentation_lr_exact": true
+    },
+    {
+      "run_id": "crop_mixup_seed142",
+      "epochs_checked": 80,
+      "sampling_existing_augmentation_lr_exact": true
+    },
+    {
+      "run_id": "crop_seed143",
+      "epochs_checked": 80,
+      "sampling_existing_augmentation_lr_exact": true
+    },
+    {
+      "run_id": "crop_mixup_seed143",
+      "epochs_checked": 80,
+      "sampling_existing_augmentation_lr_exact": true
+    },
+    {
+      "run_id": "crop_seed144",
+      "epochs_checked": 80,
+      "sampling_existing_augmentation_lr_exact": true
+    },
+    {
+      "run_id": "crop_mixup_seed144",
+      "epochs_checked": 80,
+      "sampling_existing_augmentation_lr_exact": true
+    }
+  ],
+  "auditor_sha256": "1029757407c7fff3ccce1ca01f513ccbf23d38948adf5e552e3c117ff54c9946"
+}

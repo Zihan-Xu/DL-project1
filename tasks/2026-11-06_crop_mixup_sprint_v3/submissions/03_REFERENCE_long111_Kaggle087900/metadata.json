@@ -1,0 +1,31 @@
+{
+  "version": "03_REFERENCE_long111_Kaggle087900",
+  "policy": "tta",
+  "configuration": "long_111",
+  "new_candidate": false,
+  "recommended": false,
+  "seed": 42,
+  "training_images": 50000,
+  "epochs": 240,
+  "parameters": 2436346,
+  "model_sha256": "6ffed5a3b60d34ee7da7f1586984b457b91eb2740e9585163130b3e4cfc57b7c",
+  "model_path": "tasks/2026-11-06_long111_full50k_v2/model.pt",
+  "config_sha256": "98a0da94509b0b99027cc822046d725e644ec6188ba921d10ba8abbcc74687e1",
+  "config_path": "tasks/2026-11-06_long111_full50k_v2/evidence/config.json",
+  "kaggle_score": 0.879,
+  "kaggle_score_provenance": "User reported; remote submitted bytes not independently retrieved",
+  "rows": 2000,
+  "csv_sha256": "f25fd0618bf2784593ca29a875839eb6e08160a58db66adf7f9c02afc5c31996",
+  "label_counts": {
+    "0": 175,
+    "1": 223,
+    "2": 202,
+    "3": 208,
+    "4": 199,
+    "5": 206,
+    "6": 184,
+    "7": 202,
+    "8": 205,
+    "9": 196
+  }
+}

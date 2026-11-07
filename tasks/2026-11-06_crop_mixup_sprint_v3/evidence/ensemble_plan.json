@@ -1,0 +1,26 @@
+{
+  "registered_at_utc": "2026-11-07T04:11:54.984433+00:00",
+  "seeds": [
+    142,
+    143,
+    144
+  ],
+  "new_branch": "Use the primary complete-study winner and its selected raw/tta policy; never choose the new recipe by ensemble outcomes.",
+  "reference_branch": "long_111,240epochs,TTA,matched seed",
+  "mixture_weights": [
+    0.5,
+    0.5
+  ],
+  "parameters": 4872692,
+  "planned_replays": 3,
+  "selection": "Recommend only if all three independent replays pass and the complete mean exceeds both primary winner and long_111/TTA mean0.9604. No weight or temperature search.",
+  "timing": "Secondary plan registered after four primary runs, before any combination was evaluated. All six primary runs must pass acceptance first.",
+  "rules_url": "https://www.kaggle.com/competitions/cifar-10-res-net-architecture-challenge-dl/rules",
+  "rules_reviewed_at_utc": "2026-11-07T04:10:00Z",
+  "rule_interpretation": "Custom residual CNN components are allowed; count every parameter of both from-scratch residual branches against5M. No explicit ensemble prohibition was present; this is an interpretation of the architecture rule, not special staff approval.",
+  "publication": "Keep new checkpoints/predictions local until competition deadline to avoid sharing between teams during the competition.",
+  "sources": {
+    "delivery_tools\\ensemble_sprint.py": "b8a7be84d75d9f38da5339e2233ba585e9bf13e2d0d7c19f4246fe6b0d037ca9",
+    "delivery_tools\\dual_residual.py": "9f0f08caae0c049748e9aeb8adb5518a28c0d2ff09118a7276742ce7bc57a96e"
+  }
+}

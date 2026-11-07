@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "run_id": "crop_seed142",
+  "training_images": 40000,
+  "validation_images": 5000,
+  "epochs_checked": 80,
+  "parameters": 2436346
+}

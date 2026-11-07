@@ -1,0 +1,9 @@
+{
+  "run_id": "crop_seed144",
+  "raw_correct": 4756,
+  "tta_correct": 4781,
+  "n": 5000,
+  "checkpoint_sha256": "a35a689b430192e27b20af7bb493b44bc44ed93a516c5ecc8857608627b6728b",
+  "inference_sha256": "b01432c15cd3529ac4d4e65e9377e8fd4ca07a4bd4fb59f53443bbd3a8976980",
+  "raw_logits_replay_identical": true
+}

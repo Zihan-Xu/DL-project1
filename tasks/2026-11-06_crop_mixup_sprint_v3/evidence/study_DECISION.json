@@ -1,0 +1,13 @@
+{
+  "configuration": "crop_mixup",
+  "policy": "tta",
+  "n": 3,
+  "planned_n": 3,
+  "mean_accuracy": 0.9578000000000001,
+  "sd": 0.0008717797887081023,
+  "deployment_seed": 42,
+  "full_training_images": 50000,
+  "epochs": 80,
+  "exceeds_previous_best_validation_mean": false,
+  "official_kaggle_score": null
+}

@@ -1,0 +1,20 @@
+{
+  "completed_at_utc": "2026-11-07T04:35:14.475257+00:00",
+  "configuration": "crop_mixup",
+  "policy": "tta",
+  "epoch": 80,
+  "parameters": 2436346,
+  "training_images": 50000,
+  "optimizer_updates": 31280,
+  "total_training_presentations": 4000000,
+  "validation_accuracy": null,
+  "kaggle_score": null,
+  "uploaded": false,
+  "artifact_sha256": {
+    "model.pt": "8e9f7da5266cc233470b8226326522b07af3530a47b6f1bdd8ee8bbcd05e2ed2",
+    "submission.csv": "65058022b94967818cfc756ea903ce0bec23ab0a4506fb7bff6a7607c6ddd5e7",
+    "competition_scores.npy": "1483e0f6e58dda2c5b4348127ea57466ffe4d6233087939c4c11b80600a7167a",
+    "history.csv": "1bbb51de9706dcf265f7acb4970f1a468e34ff467bf43fd9863583b1e1413115",
+    "config.json": "1077fbe54d286dd6f116d98477be4e0cd0a9917ec9934f0735546faedfcdc815"
+  }
+}

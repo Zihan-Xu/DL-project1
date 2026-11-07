@@ -1,0 +1,326 @@
+{
+  "created_at_utc": "2026-11-07T03:22:54.226108+00:00",
+  "seeds": [
+    142,
+    143,
+    144
+  ],
+  "epochs": 80,
+  "runs": [
+    {
+      "run_id": "crop_seed142",
+      "seed": 142,
+      "spec": {
+        "name": "crop",
+        "control": "confirm_000",
+        "seeds": [
+          142,
+          143,
+          144
+        ],
+        "recipe": {
+          "width": 3,
+          "epochs": 80,
+          "batch_size": 128,
+          "lr": 0.1,
+          "momentum": 0.9,
+          "weight_decay": 0.0005,
+          "scheduler": "cosine",
+          "warmup": 0,
+          "blur": true,
+          "cutout": 12,
+          "dropout": 0.0,
+          "drop_path": 0.0,
+          "rotation": 0.0,
+          "views": 1,
+          "preact": false,
+          "se": false,
+          "kd_temperature": 0.0,
+          "crop_padding": 4,
+          "mixup_alpha": 0.0,
+          "mixup_probability": 0.5
+        },
+        "parameters": 2436346,
+        "macs": 436103040,
+        "learned_macs": 435439488,
+        "fixed_blur_macs": 663552,
+        "teacher_parameters": 0
+      },
+      "input_source_hashes": {
+        "experiments\\research_sweep\\deadline_sprint_20261106\\sprint.py": "04ee02f5e204f3fba6195e1c07ac2076a8cf8aff1d68ecb72141505370906fdc",
+        "experiments\\research_sweep\\deadline_sprint_20261106\\operators.py": "1e29a96cbf21f755b19594316431e639f6ea318f677dc1ac803179c0440c0348",
+        "experiments\\research_sweep\\combinations\\runner.py": "81fdec223dc6b1c92c8ac3682e2f771e24d2e8352b0c2bd110130174a6734947",
+        "experiments\\research_sweep\\combinations\\methods.py": "3aacf847e9fbe5d86b7175f241b041e2d60e795f0521d9612c86338bf5c99d4a",
+        "experiments\\research_sweep\\architecture\\models.py": "f51f095de9ebdf526b3a4b1ce13f8dd1b52f2adf6fbe62fdfddcd8a50cbe6365",
+        "experiments\\research_sweep\\training\\methods.py": "1f285e2fa2646a80054097cb8128db9873b831d41a276fadc9d3b9715971c8cc",
+        "baseline\\splits.csv": "b7567e2b90c9d085a48d643b26615629b727fd4a4cfe25073150d5c7938ea9ca",
+        "baseline\\data_audit.json": "1f2135e995fb3b72b4ec826e5d50bb16cfe0c1b653a93a48d3246308f4a92f21"
+      },
+      "config_sha256": "23e16e8128c8029810e83f9517a3aa6df06eab3b9b7f767557ca5b185f5fdcb6"
+    },
+    {
+      "run_id": "crop_mixup_seed142",
+      "seed": 142,
+      "spec": {
+        "name": "crop_mixup",
+        "control": "confirm_000",
+        "seeds": [
+          142,
+          143,
+          144
+        ],
+        "recipe": {
+          "width": 3,
+          "epochs": 80,
+          "batch_size": 128,
+          "lr": 0.1,
+          "momentum": 0.9,
+          "weight_decay": 0.0005,
+          "scheduler": "cosine",
+          "warmup": 0,
+          "blur": true,
+          "cutout": 12,
+          "dropout": 0.0,
+          "drop_path": 0.0,
+          "rotation": 0.0,
+          "views": 1,
+          "preact": false,
+          "se": false,
+          "kd_temperature": 0.0,
+          "crop_padding": 4,
+          "mixup_alpha": 0.2,
+          "mixup_probability": 0.5
+        },
+        "parameters": 2436346,
+        "macs": 436103040,
+        "learned_macs": 435439488,
+        "fixed_blur_macs": 663552,
+        "teacher_parameters": 0
+      },
+      "input_source_hashes": {
+        "experiments\\research_sweep\\deadline_sprint_20261106\\sprint.py": "04ee02f5e204f3fba6195e1c07ac2076a8cf8aff1d68ecb72141505370906fdc",
+        "experiments\\research_sweep\\deadline_sprint_20261106\\operators.py": "1e29a96cbf21f755b19594316431e639f6ea318f677dc1ac803179c0440c0348",
+        "experiments\\research_sweep\\combinations\\runner.py": "81fdec223dc6b1c92c8ac3682e2f771e24d2e8352b0c2bd110130174a6734947",
+        "experiments\\research_sweep\\combinations\\methods.py": "3aacf847e9fbe5d86b7175f241b041e2d60e795f0521d9612c86338bf5c99d4a",
+        "experiments\\research_sweep\\architecture\\models.py": "f51f095de9ebdf526b3a4b1ce13f8dd1b52f2adf6fbe62fdfddcd8a50cbe6365",
+        "experiments\\research_sweep\\training\\methods.py": "1f285e2fa2646a80054097cb8128db9873b831d41a276fadc9d3b9715971c8cc",
+        "baseline\\splits.csv": "b7567e2b90c9d085a48d643b26615629b727fd4a4cfe25073150d5c7938ea9ca",
+        "baseline\\data_audit.json": "1f2135e995fb3b72b4ec826e5d50bb16cfe0c1b653a93a48d3246308f4a92f21"
+      },
+      "config_sha256": "83036bfb820f581bb0fa5470d2e93f4e6119cc35fed02e6e9f0ebda5e553aace"
+    },
+    {
+      "run_id": "crop_seed143",
+      "seed": 143,
+      "spec": {
+        "name": "crop",
+        "control": "confirm_000",
+        "seeds": [
+          142,
+          143,
+          144
+        ],
+        "recipe": {
+          "width": 3,
+          "epochs": 80,
+          "batch_size": 128,
+          "lr": 0.1,
+          "momentum": 0.9,
+          "weight_decay": 0.0005,
+          "scheduler": "cosine",
+          "warmup": 0,
+          "blur": true,
+          "cutout": 12,
+          "dropout": 0.0,
+          "drop_path": 0.0,
+          "rotation": 0.0,
+          "views": 1,
+          "preact": false,
+          "se": false,
+          "kd_temperature": 0.0,
+          "crop_padding": 4,
+          "mixup_alpha": 0.0,
+          "mixup_probability": 0.5
+        },
+        "parameters": 2436346,
+        "macs": 436103040,
+        "learned_macs": 435439488,
+        "fixed_blur_macs": 663552,
+        "teacher_parameters": 0
+      },
+      "input_source_hashes": {
+        "experiments\\research_sweep\\deadline_sprint_20261106\\sprint.py": "04ee02f5e204f3fba6195e1c07ac2076a8cf8aff1d68ecb72141505370906fdc",
+        "experiments\\research_sweep\\deadline_sprint_20261106\\operators.py": "1e29a96cbf21f755b19594316431e639f6ea318f677dc1ac803179c0440c0348",
+        "experiments\\research_sweep\\combinations\\runner.py": "81fdec223dc6b1c92c8ac3682e2f771e24d2e8352b0c2bd110130174a6734947",
+        "experiments\\research_sweep\\combinations\\methods.py": "3aacf847e9fbe5d86b7175f241b041e2d60e795f0521d9612c86338bf5c99d4a",
+        "experiments\\research_sweep\\architecture\\models.py": "f51f095de9ebdf526b3a4b1ce13f8dd1b52f2adf6fbe62fdfddcd8a50cbe6365",
+        "experiments\\research_sweep\\training\\methods.py": "1f285e2fa2646a80054097cb8128db9873b831d41a276fadc9d3b9715971c8cc",
+        "baseline\\splits.csv": "b7567e2b90c9d085a48d643b26615629b727fd4a4cfe25073150d5c7938ea9ca",
+        "baseline\\data_audit.json": "1f2135e995fb3b72b4ec826e5d50bb16cfe0c1b653a93a48d3246308f4a92f21"
+      },
+      "config_sha256": "ea97945c17487a60299319c797edbfefc9e94e8ec73e3d2f050b4e77e18c7f55"
+    },
+    {
+      "run_id": "crop_mixup_seed143",
+      "seed": 143,
+      "spec": {
+        "name": "crop_mixup",
+        "control": "confirm_000",
+        "seeds": [
+          142,
+          143,
+          144
+        ],
+        "recipe": {
+          "width": 3,
+          "epochs": 80,
+          "batch_size": 128,
+          "lr": 0.1,
+          "momentum": 0.9,
+          "weight_decay": 0.0005,
+          "scheduler": "cosine",
+          "warmup": 0,
+          "blur": true,
+          "cutout": 12,
+          "dropout": 0.0,
+          "drop_path": 0.0,
+          "rotation": 0.0,
+          "views": 1,
+          "preact": false,
+          "se": false,
+          "kd_temperature": 0.0,
+          "crop_padding": 4,
+          "mixup_alpha": 0.2,
+          "mixup_probability": 0.5
+        },
+        "parameters": 2436346,
+        "macs": 436103040,
+        "learned_macs": 435439488,
+        "fixed_blur_macs": 663552,
+        "teacher_parameters": 0
+      },
+      "input_source_hashes": {
+        "experiments\\research_sweep\\deadline_sprint_20261106\\sprint.py": "04ee02f5e204f3fba6195e1c07ac2076a8cf8aff1d68ecb72141505370906fdc",
+        "experiments\\research_sweep\\deadline_sprint_20261106\\operators.py": "1e29a96cbf21f755b19594316431e639f6ea318f677dc1ac803179c0440c0348",
+        "experiments\\research_sweep\\combinations\\runner.py": "81fdec223dc6b1c92c8ac3682e2f771e24d2e8352b0c2bd110130174a6734947",
+        "experiments\\research_sweep\\combinations\\methods.py": "3aacf847e9fbe5d86b7175f241b041e2d60e795f0521d9612c86338bf5c99d4a",
+        "experiments\\research_sweep\\architecture\\models.py": "f51f095de9ebdf526b3a4b1ce13f8dd1b52f2adf6fbe62fdfddcd8a50cbe6365",
+        "experiments\\research_sweep\\training\\methods.py": "1f285e2fa2646a80054097cb8128db9873b831d41a276fadc9d3b9715971c8cc",
+        "baseline\\splits.csv": "b7567e2b90c9d085a48d643b26615629b727fd4a4cfe25073150d5c7938ea9ca",
+        "baseline\\data_audit.json": "1f2135e995fb3b72b4ec826e5d50bb16cfe0c1b653a93a48d3246308f4a92f21"
+      },
+      "config_sha256": "0a102088036f65a95f44a6cc69827e81cd3f766e51a4f7e3d067b971ea813b2d"
+    },
+    {
+      "run_id": "crop_seed144",
+      "seed": 144,
+      "spec": {
+        "name": "crop",
+        "control": "confirm_000",
+        "seeds": [
+          142,
+          143,
+          144
+        ],
+        "recipe": {
+          "width": 3,
+          "epochs": 80,
+          "batch_size": 128,
+          "lr": 0.1,
+          "momentum": 0.9,
+          "weight_decay": 0.0005,
+          "scheduler": "cosine",
+          "warmup": 0,
+          "blur": true,
+          "cutout": 12,
+          "dropout": 0.0,
+          "drop_path": 0.0,
+          "rotation": 0.0,
+          "views": 1,
+          "preact": false,
+          "se": false,
+          "kd_temperature": 0.0,
+          "crop_padding": 4,
+          "mixup_alpha": 0.0,
+          "mixup_probability": 0.5
+        },
+        "parameters": 2436346,
+        "macs": 436103040,
+        "learned_macs": 435439488,
+        "fixed_blur_macs": 663552,
+        "teacher_parameters": 0
+      },
+      "input_source_hashes": {
+        "experiments\\research_sweep\\deadline_sprint_20261106\\sprint.py": "04ee02f5e204f3fba6195e1c07ac2076a8cf8aff1d68ecb72141505370906fdc",
+        "experiments\\research_sweep\\deadline_sprint_20261106\\operators.py": "1e29a96cbf21f755b19594316431e639f6ea318f677dc1ac803179c0440c0348",
+        "experiments\\research_sweep\\combinations\\runner.py": "81fdec223dc6b1c92c8ac3682e2f771e24d2e8352b0c2bd110130174a6734947",
+        "experiments\\research_sweep\\combinations\\methods.py": "3aacf847e9fbe5d86b7175f241b041e2d60e795f0521d9612c86338bf5c99d4a",
+        "experiments\\research_sweep\\architecture\\models.py": "f51f095de9ebdf526b3a4b1ce13f8dd1b52f2adf6fbe62fdfddcd8a50cbe6365",
+        "experiments\\research_sweep\\training\\methods.py": "1f285e2fa2646a80054097cb8128db9873b831d41a276fadc9d3b9715971c8cc",
+        "baseline\\splits.csv": "b7567e2b90c9d085a48d643b26615629b727fd4a4cfe25073150d5c7938ea9ca",
+        "baseline\\data_audit.json": "1f2135e995fb3b72b4ec826e5d50bb16cfe0c1b653a93a48d3246308f4a92f21"
+      },
+      "config_sha256": "4df1b5da8735c8241a1838d13e7b6f5b858353bd227a3fcd2b648aafffb9cc4d"
+    },
+    {
+      "run_id": "crop_mixup_seed144",
+      "seed": 144,
+      "spec": {
+        "name": "crop_mixup",
+        "control": "confirm_000",
+        "seeds": [
+          142,
+          143,
+          144
+        ],
+        "recipe": {
+          "width": 3,
+          "epochs": 80,
+          "batch_size": 128,
+          "lr": 0.1,
+          "momentum": 0.9,
+          "weight_decay": 0.0005,
+          "scheduler": "cosine",
+          "warmup": 0,
+          "blur": true,
+          "cutout": 12,
+          "dropout": 0.0,
+          "drop_path": 0.0,
+          "rotation": 0.0,
+          "views": 1,
+          "preact": false,
+          "se": false,
+          "kd_temperature": 0.0,
+          "crop_padding": 4,
+          "mixup_alpha": 0.2,
+          "mixup_probability": 0.5
+        },
+        "parameters": 2436346,
+        "macs": 436103040,
+        "learned_macs": 435439488,
+        "fixed_blur_macs": 663552,
+        "teacher_parameters": 0
+      },
+      "input_source_hashes": {
+        "experiments\\research_sweep\\deadline_sprint_20261106\\sprint.py": "04ee02f5e204f3fba6195e1c07ac2076a8cf8aff1d68ecb72141505370906fdc",
+        "experiments\\research_sweep\\deadline_sprint_20261106\\operators.py": "1e29a96cbf21f755b19594316431e639f6ea318f677dc1ac803179c0440c0348",
+        "experiments\\research_sweep\\combinations\\runner.py": "81fdec223dc6b1c92c8ac3682e2f771e24d2e8352b0c2bd110130174a6734947",
+        "experiments\\research_sweep\\combinations\\methods.py": "3aacf847e9fbe5d86b7175f241b041e2d60e795f0521d9612c86338bf5c99d4a",
+        "experiments\\research_sweep\\architecture\\models.py": "f51f095de9ebdf526b3a4b1ce13f8dd1b52f2adf6fbe62fdfddcd8a50cbe6365",
+        "experiments\\research_sweep\\training\\methods.py": "1f285e2fa2646a80054097cb8128db9873b831d41a276fadc9d3b9715971c8cc",
+        "baseline\\splits.csv": "b7567e2b90c9d085a48d643b26615629b727fd4a4cfe25073150d5c7938ea9ca",
+        "baseline\\data_audit.json": "1f2135e995fb3b72b4ec826e5d50bb16cfe0c1b653a93a48d3246308f4a92f21"
+      },
+      "config_sha256": "b1cdb853794bd39e17991ac8ff42b67fb7d1c12c9da5784fc0395826ecba689e"
+    }
+  ],
+  "selection": "Complete all six runs. Rank mean validation correct for raw and horizontal-flip probability average. Ties prefer raw, no Mixup, then name. Do not pick highest single seed.",
+  "benchmark_control": "Reuse accepted confirm_000 seed142/143/144 (same core recipe, optimizer, schedule, batch sampler, split and seeds; crop absent).",
+  "current_best_recipe_validation_mean": 0.9604,
+  "current_reported_kaggle_score": 0.879,
+  "deadline_utc": "2026-11-07T04:59:59Z",
+  "final_fit_seed": 42,
+  "final_fit_training_images": 50000,
+  "final_fit_epochs": 80,
+  "kaggle_auto_submit": false
+}

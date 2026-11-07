@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "parameters": 2436346,
+  "model_sha256": "8e9f7da5266cc233470b8226326522b07af3530a47b6f1bdd8ee8bbcd05e2ed2",
+  "versions": [
+    {
+      "version": "01_SELECTED_crop_mixup_full50k_tta",
+      "rows": 2000,
+      "cpu_gpu_labels_identical": true,
+      "csv_sha256": "65058022b94967818cfc756ea903ce0bec23ab0a4506fb7bff6a7607c6ddd5e7"
+    },
+    {
+      "version": "02_ALTERNATIVE_crop_mixup_full50k_raw",
+      "rows": 2000,
+      "cpu_gpu_labels_identical": true,
+      "csv_sha256": "44301dba22420ef9314f174e366f7e5b5282df7d28cae361895815d1eb21abf0"
+    }
+  ],
+  "checked_at_utc": "2026-11-07T04:36:44.712898+00:00"
+}

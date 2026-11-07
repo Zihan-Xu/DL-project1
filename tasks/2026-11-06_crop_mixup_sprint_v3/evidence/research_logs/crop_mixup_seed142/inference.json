@@ -1,0 +1,9 @@
+{
+  "run_id": "crop_mixup_seed142",
+  "raw_correct": 4776,
+  "tta_correct": 4787,
+  "n": 5000,
+  "checkpoint_sha256": "b183a446b689a7653320c9b2f1a744f811cbbbd48057fb2e9fd352fcbcd5b563",
+  "inference_sha256": "94b0c6a25f7ca77f526d89d97155c2cae5a11ce6ce59022e731fcb567f55ccb7",
+  "raw_logits_replay_identical": true
+}

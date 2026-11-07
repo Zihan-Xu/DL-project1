@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "crop_exact_reference_match": true,
+  "source_identity_order_preserved": true,
+  "mixup_labels_match_image_weights": true,
+  "finite_backward": true,
+  "full50k_augmentation_shape_checked": true,
+  "resume_epoch_plan_reproducible": true
+}

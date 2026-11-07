@@ -1,0 +1,56 @@
+{
+  "run_id": "confirm_000_seed143",
+  "seed": 143,
+  "spec": {
+    "name": "confirm_000",
+    "control": null,
+    "seeds": [
+      142,
+      143,
+      144
+    ],
+    "recipe": {
+      "width": 3,
+      "epochs": 80,
+      "batch_size": 128,
+      "lr": 0.1,
+      "momentum": 0.9,
+      "weight_decay": 0.0005,
+      "scheduler": "cosine",
+      "warmup": 0,
+      "blur": true,
+      "cutout": 12,
+      "dropout": 0.0,
+      "drop_path": 0.0,
+      "rotation": 0.0,
+      "views": 1,
+      "preact": false,
+      "se": false,
+      "kd_temperature": 0.0
+    },
+    "parameters": 2436346,
+    "macs": 436103040,
+    "learned_macs": 435439488,
+    "fixed_blur_macs": 663552,
+    "teacher_parameters": 0
+  },
+  "input_source_hashes": {
+    "experiments/research_sweep/confirmation/runner.py": "1efd67dc6c85f8adbe39ecafd760afefa097c569569a8dbb54974588ba7c2e3b",
+    "experiments/research_sweep/confirmation/methods.py": "3aacf847e9fbe5d86b7175f241b041e2d60e795f0521d9612c86338bf5c99d4a",
+    "experiments/research_sweep/confirmation/register.py": "fa991a162be91812cfa786b95f1ba8cbede2753a87d2d5ea6a4387778a67eddf",
+    "experiments/research_sweep/confirmation/report.py": "bd33d6b3b6e5f7d27210ed4bf50b9993208269095cf85f160a26b2ad1ee880b2",
+    "experiments/research_sweep/confirmation/postprocess.py": "e99522431b935100ca17fdbec22814f9e2d18b8c930040e8339a5b0d9da5b357",
+    "experiments/research_sweep/combinations/register.py": "b916c818448e7e5ade985eaede7c9c0b3a084908b8b759651db9006c26090374",
+    "model.py": "8e06052f3d905a6222ada723a4956a3f984ba351e48576a53d878ff0c488a92e",
+    "experiments/research_sweep/runtime.py": "15174a7471b7a28919f3fa70a3fb533e27992d8ec77920b3fe00ffc274440376",
+    "experiments/research_sweep/architecture/models.py": "f51f095de9ebdf526b3a4b1ce13f8dd1b52f2adf6fbe62fdfddcd8a50cbe6365",
+    "experiments/research_sweep/architecture/runner.py": "bea03d7fe2d251f4b2d2d4e6128c1144e30b18d18af18aae48418f36ea0ffd85",
+    "experiments/research_sweep/training/methods.py": "1f285e2fa2646a80054097cb8128db9873b831d41a276fadc9d3b9715971c8cc",
+    "baseline/splits.csv": "b7567e2b90c9d085a48d643b26615629b727fd4a4cfe25073150d5c7938ea9ca",
+    ".cache/baseline/train.npy": "4a5241847d2fdc2d50a9ad6e386b47f26d121db6cb2e43b24e72190724314e48",
+    "baseline/data_audit.json": "1f2135e995fb3b72b4ec826e5d50bb16cfe0c1b653a93a48d3246308f4a92f21",
+    "experiments/width_sweep/3x/resnet20.pt": "aa64543eba16b580a5a6f6bb8b88d31afeff1156eefcd7bd7b62f8e948b0d02a",
+    "experiments/research_sweep/confirmation/PLAN.md": "956ba0bd6eb0a4c43b3e6b7781a44ded04ed1bd0f166ce304e5b8557e1b368ef"
+  },
+  "config_sha256": "7643a9875da3efdd7428c1e6235fc27d38766faf0674d588bb251da38ad218f3"
+}

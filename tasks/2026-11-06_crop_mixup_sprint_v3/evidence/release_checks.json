@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "completed_research_runs": 6,
+  "seeds": [
+    142,
+    143,
+    144
+  ],
+  "research_epochs": 80,
+  "final_training_images": 50000,
+  "final_epochs": 80,
+  "parameters": 2436346,
+  "dual_parameters": 4872692,
+  "dual_validation_mean": 0.9633333333333334,
+  "dual_accepted": true,
+  "independent_cpu_replay": true,
+  "submission_versions": 4,
+  "all_2000_ids_in_sample_order": true,
+  "labels_integer_0_to_9": true,
+  "executed_notebook_cells": 6,
+  "pdf_pages_reviewed": 5,
+  "notebook_figures_visually_reviewed": true,
+  "full_notebook_viewer_review": true,
+  "notebook_viewer_note": "Executed notebook HTML reading preview inspected.",
+  "new_kaggle_score": null,
+  "previous_user_reported_kaggle_score": 0.879,
+  "exceeds_previous_validation_mean": true
+}

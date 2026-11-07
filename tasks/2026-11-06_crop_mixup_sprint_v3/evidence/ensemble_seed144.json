@@ -1,0 +1,14 @@
+{
+  "seed": 144,
+  "old_correct": 4809,
+  "new_correct": 4794,
+  "combined_correct": 4815,
+  "n": 5000,
+  "parameters": 4872692,
+  "passed": true,
+  "new_checkpoint_sha256": "c3fdca5622a9d5734bd28cf2b95832671ac4f0029529a3167725650537822730",
+  "reference_checkpoint_sha256": "5feb85e04bc0e69a55e7d7f2a07eca2d93a6d709895bfb089bb01bb1c488831c",
+  "max_abs_error": 1.430511474609375e-06,
+  "elapsed_seconds": 78.0897144000046,
+  "probabilities_sha256": "d1d34ae4bf0e9858e91a7cc6e202e9980abe26a36a1ebbe7448731131d4736b1"
+}

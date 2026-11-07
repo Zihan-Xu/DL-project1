@@ -1,0 +1,58 @@
+{
+  "seed": 42,
+  "configuration": "crop_mixup",
+  "recipe": {
+    "width": 3,
+    "epochs": 80,
+    "batch_size": 128,
+    "lr": 0.1,
+    "momentum": 0.9,
+    "weight_decay": 0.0005,
+    "scheduler": "cosine",
+    "warmup": 0,
+    "blur": true,
+    "cutout": 12,
+    "dropout": 0.0,
+    "drop_path": 0.0,
+    "rotation": 0.0,
+    "views": 1,
+    "preact": false,
+    "se": false,
+    "kd_temperature": 0.0,
+    "crop_padding": 4,
+    "mixup_alpha": 0.2,
+    "mixup_probability": 0.5
+  },
+  "policy": "tta",
+  "epochs": 80,
+  "training_images": 50000,
+  "mean": [
+    0.49139967861523437,
+    0.4821584083946432,
+    0.4465309144455372
+  ],
+  "std": [
+    0.24703223246322364,
+    0.2434851279999559,
+    0.2615878417277477
+  ],
+  "parameters": 2436346,
+  "checkpoint_rule": "last prescribed epoch; no validation or early stopping",
+  "selection_validation_mean": 0.9578000000000001,
+  "selection_note": "Research models trained on 40k; not independent accuracy of this final 50k model",
+  "source_hashes": {
+    "experiments\\research_sweep\\deadline_sprint_20261106\\ACCEPTANCE.json": "1f789a2f89e1ee2b7913a4daef62628c9e90eb6a7cde7fdb6464a9ca12427b9b",
+    "experiments\\research_sweep\\deadline_sprint_20261106\\DECISION.json": "d4edcfc4b1d287c590c563baeb390ca13edbe9cb31a6f45df5cd7919c813334d",
+    "experiments\\research_sweep\\deadline_sprint_20261106\\manifest.json": "2d4e73e2f10c06c91224cd4c53b57edc26a94b7ed35d344f3a9344afc2744631",
+    "data\\competition\\train_labels.csv": "b596f4cbb12107ecac987e3a61123af40408a6bb83719a1dbb5cc3ce70968e93",
+    ".cache\\baseline\\train.npy": "4a5241847d2fdc2d50a9ad6e386b47f26d121db6cb2e43b24e72190724314e48"
+  },
+  "code_hashes": {
+    "delivery_tools\\train_sprint_full50k.py": "8a1e67cec91a85043eda5ade599ac7f41139d5bc99004774d2c4b1ec0e1d3493",
+    "experiments\\research_sweep\\final_full50k\\train.py": "b499f175f00586a67d177645bd2d7328084c6866f43ac8a768968cbb78983208",
+    "experiments\\research_sweep\\deadline_sprint_20261106\\operators.py": "1e29a96cbf21f755b19594316431e639f6ea318f677dc1ac803179c0440c0348",
+    "experiments\\research_sweep\\combinations\\methods.py": "3aacf847e9fbe5d86b7175f241b041e2d60e795f0521d9612c86338bf5c99d4a",
+    "experiments\\research_sweep\\training\\methods.py": "1f285e2fa2646a80054097cb8128db9873b831d41a276fadc9d3b9715971c8cc",
+    "experiments\\research_sweep\\architecture\\models.py": "f51f095de9ebdf526b3a4b1ce13f8dd1b52f2adf6fbe62fdfddcd8a50cbe6365"
+  }
+}
