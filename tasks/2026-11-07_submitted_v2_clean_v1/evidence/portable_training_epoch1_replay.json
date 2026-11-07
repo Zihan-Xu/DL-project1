@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "epoch": 1,
+  "images": 50000,
+  "exact_first_epoch_matches": [
+    "epoch",
+    "lr",
+    "train_loss",
+    "train_accuracy",
+    "examples",
+    "updates",
+    "order_sha256",
+    "sampler_swaps"
+  ],
+  "full_240_epoch_retraining_repeated": false
+}

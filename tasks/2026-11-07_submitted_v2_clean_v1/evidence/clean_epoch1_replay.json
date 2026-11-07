@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "epoch": 1,
+  "all_non_timing_fields_exact": true,
+  "checked_fields": [
+    "epoch",
+    "lr",
+    "train_loss",
+    "train_accuracy",
+    "examples",
+    "updates",
+    "order_sha256",
+    "sampler_swaps"
+  ],
+  "actual": {
+    "epoch": "1",
+    "lr": "0.1",
+    "train_loss": "1.658484641418457",
+    "train_accuracy": "0.38676000000000005",
+    "examples": "50000",
+    "updates": "391",
+    "order_sha256": "cec07f0b3b9e5fc2dea0d2afb33bb9a0648b811d30bffb8eae7cde95a0655636",
+    "sampler_swaps": "0"
+  },
+  "complete_240_epoch_retraining_performed": false
+}

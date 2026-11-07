@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "initialization_state_dict_exact": true,
+  "inference_logits_exact": true,
+  "training_logits_exact": true,
+  "gradients_exact": true,
+  "augmentation_exact": true,
+  "checkpoint_keys_unchanged": true,
+  "parameters": 2436346,
+  "checked_seed": 42,
+  "checked_augmentation_epochs": [
+    1,
+    2,
+    240
+  ]
+}

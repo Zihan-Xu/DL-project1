@@ -1,0 +1,20 @@
+{
+  "completed_at_utc": "2026-11-07T03:02:51.692279+00:00",
+  "configuration": "long_111",
+  "policy": "tta",
+  "epoch": 240,
+  "parameters": 2436346,
+  "training_images": 50000,
+  "optimizer_updates": 93840,
+  "total_training_presentations": 12000000,
+  "validation_accuracy": null,
+  "kaggle_score": null,
+  "uploaded": false,
+  "artifact_sha256": {
+    "model.pt": "6ffed5a3b60d34ee7da7f1586984b457b91eb2740e9585163130b3e4cfc57b7c",
+    "submission.csv": "f25fd0618bf2784593ca29a875839eb6e08160a58db66adf7f9c02afc5c31996",
+    "competition_scores.npy": "cd69dcf90fe5899b36bd1835a39637b9b5ff4bac197c4d5a04f074ec01efd948",
+    "history.csv": "a25bd8b38f706d29324bbe0f1c2ff28b4b05177349d3c1414f098e65ae812c56",
+    "config.json": "98a0da94509b0b99027cc822046d725e644ec6188ba921d10ba8abbcc74687e1"
+  }
+}

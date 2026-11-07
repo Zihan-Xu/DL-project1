@@ -1,0 +1,13 @@
+{
+  "remote_sha256": "f25fd0618bf2784593ca29a875839eb6e08160a58db66adf7f9c02afc5c31996",
+  "local_sha256": "f25fd0618bf2784593ca29a875839eb6e08160a58db66adf7f9c02afc5c31996",
+  "byte_identical": true,
+  "rows": 2000,
+  "predictions_identical": true,
+  "public_score": 0.879,
+  "submitted_at": "2026-11-06 22:15:04 America/New_York",
+  "configuration": "long_111",
+  "training_images": 50000,
+  "policy": "tta",
+  "remote_file_downloaded_from_latest_submission": true
+}
