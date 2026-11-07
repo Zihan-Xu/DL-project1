@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "parameters": 2436346,
+  "completed_research_runs": 30,
+  "research_prediction_tables_verified": 60,
+  "research_validation_mean_percent": 96.04,
+  "final_training_epochs": 240,
+  "optimizer_updates": 93840,
+  "submission_versions": 2,
+  "tta_raw_disagreements": 69,
+  "kaggle_public_accuracy_percent": 87.9,
+  "kaggle_private_accuracy": null,
+  "final_independent_local_accuracy": null,
+  "submission_identity": "Exact second submitted CSV; SHA-256 verified",
+  "sample_order_check": "official sample file"
+}

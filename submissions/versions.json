@@ -1,0 +1,63 @@
+[
+  {
+    "version": "01_RECOMMENDED_full50k_tta",
+    "recommended": true,
+    "configuration": "long_111",
+    "training_images": 50000,
+    "seed": 42,
+    "policy": "tta",
+    "epochs_budget": 240,
+    "checkpoint_epoch": 240,
+    "rows": 2000,
+    "parameters": 2436346,
+    "submission_sha256": "f25fd0618bf2784593ca29a875839eb6e08160a58db66adf7f9c02afc5c31996",
+    "model_sha256": "6ffed5a3b60d34ee7da7f1586984b457b91eb2740e9585163130b3e4cfc57b7c",
+    "model_path": "model.pt",
+    "kaggle_score": 0.879,
+    "kaggle_score_provenance": "Downloaded second Kaggle submission CSV matched byte for byte; recorded public score",
+    "label_counts": {
+      "0": 175,
+      "1": 223,
+      "2": 202,
+      "3": 208,
+      "4": 199,
+      "5": 206,
+      "6": 184,
+      "7": 202,
+      "8": 205,
+      "9": 196
+    },
+    "score_type": "Kaggle public leaderboard; verified submission record",
+    "config_path": "config.json"
+  },
+  {
+    "version": "02_ALTERNATIVE_full50k_raw",
+    "recommended": false,
+    "configuration": "long_111",
+    "training_images": 50000,
+    "seed": 42,
+    "policy": "raw",
+    "epochs_budget": 240,
+    "checkpoint_epoch": 240,
+    "rows": 2000,
+    "parameters": 2436346,
+    "submission_sha256": "2375fcaf2d141c7b07c4b28b5dd5e9d3ff120a768cb69f6cfca9e39b663994d2",
+    "model_sha256": "6ffed5a3b60d34ee7da7f1586984b457b91eb2740e9585163130b3e4cfc57b7c",
+    "model_path": "model.pt",
+    "kaggle_score": null,
+    "kaggle_score_provenance": "Not reported",
+    "label_counts": {
+      "0": 174,
+      "1": 219,
+      "2": 204,
+      "3": 207,
+      "4": 201,
+      "5": 202,
+      "6": 185,
+      "7": 204,
+      "8": 205,
+      "9": 199
+    },
+    "config_path": "config.json"
+  }
+]
