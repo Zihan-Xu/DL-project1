@@ -1,0 +1,26 @@
+{
+  "01_RECOMMENDED_full50k_tta": {
+    "01_RECOMMENDED_full50k_tta": 0,
+    "02_ALTERNATIVE_full50k_raw": 69,
+    "03_previous_core240_flip": 202,
+    "04_previous_core240_raw_score085": 214
+  },
+  "02_ALTERNATIVE_full50k_raw": {
+    "01_RECOMMENDED_full50k_tta": 69,
+    "02_ALTERNATIVE_full50k_raw": 0,
+    "03_previous_core240_flip": 204,
+    "04_previous_core240_raw_score085": 218
+  },
+  "03_previous_core240_flip": {
+    "01_RECOMMENDED_full50k_tta": 202,
+    "02_ALTERNATIVE_full50k_raw": 204,
+    "03_previous_core240_flip": 0,
+    "04_previous_core240_raw_score085": 84
+  },
+  "04_previous_core240_raw_score085": {
+    "01_RECOMMENDED_full50k_tta": 214,
+    "02_ALTERNATIVE_full50k_raw": 218,
+    "03_previous_core240_flip": 84,
+    "04_previous_core240_raw_score085": 0
+  }
+}

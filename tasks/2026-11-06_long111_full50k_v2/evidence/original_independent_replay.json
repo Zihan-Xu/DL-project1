@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "rows": 2000,
+  "unique_ids": 2000,
+  "parameters": 2436346,
+  "policy": "tta",
+  "device": "cpu",
+  "original_pngs_read": 2000,
+  "labels_match_reference": true,
+  "model_sha256": "6ffed5a3b60d34ee7da7f1586984b457b91eb2740e9585163130b3e4cfc57b7c",
+  "submission_sha256": "f25fd0618bf2784593ca29a875839eb6e08160a58db66adf7f9c02afc5c31996"
+}

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "parameters": 2436346,
+  "training_images": 50000,
+  "epochs": 240,
+  "research_runs": 30,
+  "submission_versions": 4,
+  "source_computational_functions_match": true,
+  "research_source_files_hash_verified": 11,
+  "all_sample_ids_match": true,
+  "all_labels_valid": true,
+  "independent_tta_replay": true,
+  "training_epoch1_exact_replay": true,
+  "executed_notebook_cells": 6,
+  "pdf_pages": 4,
+  "pdf_and_notebook_visually_reviewed": true,
+  "full_240_epoch_retraining_repeated": false,
+  "kaggle_score_new_model": null
+}

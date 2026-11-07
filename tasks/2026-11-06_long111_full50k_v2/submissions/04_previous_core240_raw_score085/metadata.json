@@ -1,0 +1,29 @@
+{
+  "version": "04_previous_core240_raw_score085",
+  "recommended": false,
+  "configuration": "core_ep240",
+  "training_images": 40000,
+  "seed": 42,
+  "policy": "raw",
+  "epochs_budget": 240,
+  "checkpoint_epoch": 238,
+  "rows": 2000,
+  "parameters": 2436346,
+  "submission_sha256": "49887313d4d082946b5af1103ca1a7be657416288bd219bf76f46bdcb840d50d",
+  "model_sha256": "0a05ece51dcbd7d6784db884d0cf4243c920687cbdc8304eced1a469f5fde297",
+  "model_path": "tasks/2026-11-06_core_ep240_v1/models/seed42.pt",
+  "kaggle_score": 0.85,
+  "kaggle_score_provenance": "User-reported; remote uploaded bytes not independently verified",
+  "label_counts": {
+    "0": 167,
+    "1": 218,
+    "2": 204,
+    "3": 196,
+    "4": 199,
+    "5": 218,
+    "6": 189,
+    "7": 198,
+    "8": 214,
+    "9": 197
+  }
+}

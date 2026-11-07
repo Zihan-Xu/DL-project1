@@ -1,0 +1,29 @@
+{
+  "version": "01_RECOMMENDED_full50k_tta",
+  "recommended": true,
+  "configuration": "long_111",
+  "training_images": 50000,
+  "seed": 42,
+  "policy": "tta",
+  "epochs_budget": 240,
+  "checkpoint_epoch": 240,
+  "rows": 2000,
+  "parameters": 2436346,
+  "submission_sha256": "f25fd0618bf2784593ca29a875839eb6e08160a58db66adf7f9c02afc5c31996",
+  "model_sha256": "6ffed5a3b60d34ee7da7f1586984b457b91eb2740e9585163130b3e4cfc57b7c",
+  "model_path": "tasks/2026-11-06_long111_full50k_v2/model.pt",
+  "kaggle_score": null,
+  "kaggle_score_provenance": "Not reported",
+  "label_counts": {
+    "0": 175,
+    "1": 223,
+    "2": 202,
+    "3": 208,
+    "4": 199,
+    "5": 206,
+    "6": 184,
+    "7": 202,
+    "8": 205,
+    "9": 196
+  }
+}

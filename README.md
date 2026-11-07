@@ -1,5 +1,20 @@
 # CIFAR-10 residual-network project
 
+**Current recommendation: [long_111 full50k v2](tasks/2026-11-06_long111_full50k_v2/).** Author and Kaggle team: Zihan Xu.
+
+The accepted 30-run confirmation study selected long_111 with horizontal-flip TTA (research validation mean96.04%, three seeds). The final seed42 model was subsequently trained from scratch on all 50,000 labeled images for 240 epochs; it has 2,436,346 parameters. Its Kaggle score is not yet reported. **96.04% is not the final50k model's independent test accuracy.**
+
+- [Recommended submission](tasks/2026-11-06_long111_full50k_v2/submissions/01_RECOMMENDED_full50k_tta/submission.csv)
+- [Report](tasks/2026-11-06_long111_full50k_v2/report.pdf), [executed notebook](tasks/2026-11-06_long111_full50k_v2/review.ipynb), [model](tasks/2026-11-06_long111_full50k_v2/model.pt)
+- [Standalone training, evaluation and inference instructions](tasks/2026-11-06_long111_full50k_v2/README.md)
+- [Previous v1 release](tasks/2026-11-06_core_ep240_v1/), retained unchanged.
+
+The sections below document the earlier40k v1 release, including its user-reported0.85 raw Kaggle score. Follow the v2 instructions above for the current model.
+
+---
+
+## Earlier release documentation
+
 **Author and Kaggle team: Zihan Xu.** Course: NYU Tandon Deep Learning, Fall 2026.
 
 This repository contains a reproducible, versioned release of a residual CNN trained from scratch on the course data. The model has **2,436,346 trainable parameters**. The completed 86-run combination study selected `core_ep240` by mean validation accuracy over seeds 42, 43 and 44: **95.3867%** with original-image inference. A subsequent three-seed validation audit of horizontal-flip probability averaging obtained **95.7667%**. Deployment keeps the preselected seed 42; its flip result is **95.78% (4,789 / 5,000)**.
