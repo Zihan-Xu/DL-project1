@@ -1,0 +1,17 @@
+{
+  "path": "tasks/2026-11-06_core_ep240_v1",
+  "configuration": "core_ep240",
+  "deployment_seed": 42,
+  "inference_policy": "flip",
+  "mean_validation_percent": 95.76666666666667,
+  "validation_n": 5000,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "local_split_sha256": "b7567e2b90c9d085a48d643b26615629b727fd4a4cfe25073150d5c7938ea9ca",
+  "author": "Zihan Xu",
+  "kaggle_team": "Zihan Xu",
+  "kaggle_flip_score": null
+}

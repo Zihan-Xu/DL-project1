@@ -1,0 +1,12 @@
+{
+  "version": "02_reference_seed42_raw",
+  "seed": 42,
+  "policy": "raw",
+  "rows": 2000,
+  "parameters": 2436346,
+  "validation_percent": 95.26,
+  "sha256": "49887313d4d082946b5af1103ca1a7be657416288bd219bf76f46bdcb840d50d",
+  "model": "models/seed42.pt",
+  "kaggle_score": 0.85,
+  "recommended": false
+}

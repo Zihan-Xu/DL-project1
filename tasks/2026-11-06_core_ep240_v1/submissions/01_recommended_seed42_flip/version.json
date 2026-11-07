@@ -1,0 +1,12 @@
+{
+  "version": "01_recommended_seed42_flip",
+  "seed": 42,
+  "policy": "flip",
+  "rows": 2000,
+  "parameters": 2436346,
+  "validation_percent": 95.78,
+  "sha256": "c636723d4fca1b4e6b310ea23aa346ae65464169a03cedddd01994f5d6abec4c",
+  "model": "models/seed42.pt",
+  "kaggle_score": null,
+  "recommended": true
+}

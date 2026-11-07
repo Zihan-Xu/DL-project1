@@ -1,0 +1,54 @@
+{
+  "run_id": "core_ep240_seed43",
+  "seed": 43,
+  "spec": {
+    "name": "core_ep240",
+    "control": "core_111",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "recipe": {
+      "width": 3,
+      "epochs": 240,
+      "batch_size": 128,
+      "lr": 0.1,
+      "momentum": 0.9,
+      "weight_decay": 0.0005,
+      "scheduler": "cosine",
+      "warmup": 0,
+      "blur": true,
+      "cutout": 12,
+      "dropout": 0.0,
+      "drop_path": 0.0,
+      "rotation": 0.0,
+      "views": 1,
+      "preact": false,
+      "se": false,
+      "kd_temperature": 0.0
+    },
+    "parameters": 2436346,
+    "macs": 436103040,
+    "learned_macs": 435439488,
+    "fixed_blur_macs": 663552,
+    "teacher_parameters": 0
+  },
+  "input_source_hashes": {
+    "experiments/research_sweep/combinations/runner.py": "81fdec223dc6b1c92c8ac3682e2f771e24d2e8352b0c2bd110130174a6734947",
+    "experiments/research_sweep/combinations/methods.py": "3aacf847e9fbe5d86b7175f241b041e2d60e795f0521d9612c86338bf5c99d4a",
+    "experiments/research_sweep/combinations/register.py": "b916c818448e7e5ade985eaede7c9c0b3a084908b8b759651db9006c26090374",
+    "experiments/research_sweep/combinations/report.py": "d438e46dcd9a143561186639a8cfa3b2539c4daebd939a10192a43d4c95f42e5",
+    "model.py": "8e06052f3d905a6222ada723a4956a3f984ba351e48576a53d878ff0c488a92e",
+    "experiments/research_sweep/runtime.py": "15174a7471b7a28919f3fa70a3fb533e27992d8ec77920b3fe00ffc274440376",
+    "experiments/research_sweep/architecture/models.py": "f51f095de9ebdf526b3a4b1ce13f8dd1b52f2adf6fbe62fdfddcd8a50cbe6365",
+    "experiments/research_sweep/architecture/runner.py": "bea03d7fe2d251f4b2d2d4e6128c1144e30b18d18af18aae48418f36ea0ffd85",
+    "experiments/research_sweep/training/methods.py": "1f285e2fa2646a80054097cb8128db9873b831d41a276fadc9d3b9715971c8cc",
+    "baseline/splits.csv": "b7567e2b90c9d085a48d643b26615629b727fd4a4cfe25073150d5c7938ea9ca",
+    ".cache/baseline/train.npy": "4a5241847d2fdc2d50a9ad6e386b47f26d121db6cb2e43b24e72190724314e48",
+    "baseline/data_audit.json": "1f2135e995fb3b72b4ec826e5d50bb16cfe0c1b653a93a48d3246308f4a92f21",
+    "experiments/width_sweep/3x/resnet20.pt": "aa64543eba16b580a5a6f6bb8b88d31afeff1156eefcd7bd7b62f8e948b0d02a",
+    "experiments/research_sweep/combinations/PLAN.md": "0972e741c859d6ae69b932bd7bec2d89b3ea5f3899979522d75907434217030f"
+  },
+  "config_sha256": "5505b8325d7e486eca0f3e3eeefdb7dc8797b1b320a19afb070e7d3d66133265"
+}

@@ -1,0 +1,18 @@
+{
+  "created_at_utc": "2026-11-07T01:36:06.773529+00:00",
+  "author": "Zihan Xu",
+  "kaggle_team": "Zihan Xu",
+  "selected_configuration": "core_ep240",
+  "selection": "highest mean validation accuracy in fully accepted 86-run study; deployment seed fixed to 42",
+  "training_runs": 86,
+  "configurations": 22,
+  "n_seeds": 3,
+  "mean_raw_validation_percent": 95.38666666666667,
+  "confirmation_acceptance_present": false,
+  "confirmation_not_used_in_this_snapshot": true,
+  "reported_kaggle_raw_score": 0.85,
+  "reported_kaggle_source": "User supplied result; uploaded CSV matched the frozen seed42/raw CSV in local audit.",
+  "flip_kaggle_score": null,
+  "private_score": null,
+  "kaggle_submitted_by_this_task": false
+}

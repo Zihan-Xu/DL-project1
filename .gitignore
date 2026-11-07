@@ -1,0 +1,9 @@
+.venv/
+.cache/
+data/
+__pycache__/
+.ipynb_checkpoints/
+retraining/
+*.lock
+experiments/research_sweep/gpu_queue/
+experiments/research_sweep/gpu_holder.json

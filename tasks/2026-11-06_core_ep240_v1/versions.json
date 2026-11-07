@@ -1,0 +1,50 @@
+[
+  {
+    "version": "01_recommended_seed42_flip",
+    "seed": 42,
+    "policy": "flip",
+    "rows": 2000,
+    "parameters": 2436346,
+    "validation_percent": 95.78,
+    "sha256": "c636723d4fca1b4e6b310ea23aa346ae65464169a03cedddd01994f5d6abec4c",
+    "model": "models/seed42.pt",
+    "kaggle_score": null,
+    "recommended": true
+  },
+  {
+    "version": "02_reference_seed42_raw",
+    "seed": 42,
+    "policy": "raw",
+    "rows": 2000,
+    "parameters": 2436346,
+    "validation_percent": 95.26,
+    "sha256": "49887313d4d082946b5af1103ca1a7be657416288bd219bf76f46bdcb840d50d",
+    "model": "models/seed42.pt",
+    "kaggle_score": 0.85,
+    "recommended": false
+  },
+  {
+    "version": "03_alternative_seed43_flip",
+    "seed": 43,
+    "policy": "flip",
+    "rows": 2000,
+    "parameters": 2436346,
+    "validation_percent": 95.68,
+    "sha256": "0cb933ea2297e156572de023a41368722f3a57a8e78f532cbe5e18830cf962d1",
+    "model": "models/seed43.pt",
+    "kaggle_score": null,
+    "recommended": false
+  },
+  {
+    "version": "04_alternative_seed44_flip",
+    "seed": 44,
+    "policy": "flip",
+    "rows": 2000,
+    "parameters": 2436346,
+    "validation_percent": 95.84,
+    "sha256": "2cd6ab33627571b512a08708e2ba283155d578e348c68db88a11bf03876f2219",
+    "model": "models/seed44.pt",
+    "kaggle_score": null,
+    "recommended": false
+  }
+]

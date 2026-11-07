@@ -1,0 +1,85 @@
+{
+  "archive_sha256": "397e06e5752bfe0576d1258765bbe1d020cca02db2fc21442cbab6d50257ca51",
+  "archive_files_byte_compared": 52003,
+  "labeled_images": 50000,
+  "competition_images": 2000,
+  "format": "32 x 32 RGB PNG",
+  "official_test_has_labels": false,
+  "sample_and_test_id_order_identical": true,
+  "labeled_duplicate_pixel_groups": 0,
+  "conflicting_label_groups": 0,
+  "competition_duplicate_extra_rows": 0,
+  "labeled_competition_shared_pixel_groups": 0,
+  "seed": 42,
+  "split_counts": {
+    "validation": 5000,
+    "train": 40000,
+    "local_test": 5000
+  },
+  "class_counts": {
+    "train": [
+      4000,
+      4000,
+      4000,
+      4000,
+      4000,
+      4000,
+      4000,
+      4000,
+      4000,
+      4000
+    ],
+    "validation": [
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500
+    ],
+    "local_test": [
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500
+    ]
+  },
+  "label_counts_before_exclusions": [
+    5000,
+    5000,
+    5000,
+    5000,
+    5000,
+    5000,
+    5000,
+    5000,
+    5000,
+    5000
+  ],
+  "train_rgb_mean": [
+    0.4918820121017371,
+    0.4827361237170945,
+    0.4469564421530932
+  ],
+  "train_rgb_std": [
+    0.24691872546222485,
+    0.2434163704290957,
+    0.26156972535543044
+  ],
+  "split_sha256": "b7567e2b90c9d085a48d643b26615629b727fd4a4cfe25073150d5c7938ea9ca",
+  "csv_sha256": {
+    "train_labels.csv": "b596f4cbb12107ecac987e3a61123af40408a6bb83719a1dbb5cc3ce70968e93",
+    "test.csv": "d0db3026e3a7bc397d6f59b7ff6825960cc32a5e2aef57df63c9140b2ad31e5d",
+    "sample_submission.csv": "83aa7ddd58d46026c3b3f870f507c33b178ebfbdf24e0a69d9f7a9d6d8cfff59"
+  }
+}
