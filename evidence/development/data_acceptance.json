@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "created_at_utc": "2026-11-05T16:38:06.905716+00:00",
+  "completed_runs": 71,
+  "new_training_runs": 65,
+  "verified_historical_imports": 6,
+  "configurations": 21,
+  "paired_comparisons": 24,
+  "color_comparisons": 2376,
+  "all_checkpoints_verified": true,
+  "all_resumable_states_checked": true,
+  "configuration_statistics_verified": true,
+  "confusion_metrics_verified": true,
+  "independent_paired_statistics_verified": true,
+  "color_denominators_verified": true,
+  "final_report_reviewed": true,
+  "cuda_initialized": false,
+  "artifacts_sha256": {
+    "REPORT.md": "4129f3a73c5c516158896cbdfc2eed3dae6a75ac984f43ebe255e04d10ea1598",
+    "summary.csv": "b10b909261c2b8c4a8f8e20ac440845aab8fa849bd2d86b6aa9cd5d9d4b3ca82",
+    "configuration_summary.csv": "e5b650ba5af50846ecfc8f5c4d157709fd63f01d39100e04048925227addedec",
+    "comparisons.csv": "18414e2857e2033106037eb87ad2440aff79e754221b707386805e71f94e3a51",
+    "color_strata.csv": "e5e63505d646fbae24fa13acc78327d3940725f765a2f61f98103db4071fcfec",
+    "color_comparisons.csv": "5c22f5e9a83695f48038b9ba7020a5c0114ef6d87c11a9ec39afd87857f9b0ad",
+    "analysis_validation.json": "bd7445eeed5d3b89b5182c5635640d75be672f37a2f89a7597d48472516f3ab2",
+    "freeze.json": "5e2b36558954e4117b8a0446ca656f8ca29c11a05fd9846e55ea2214da2c4fd0",
+    "implementation_amendment.json": "1727b37365407e2ea8eef4ff3a186f80a008ccb1104d9e66dff69553371fe1ba",
+    "runtime_io_amendment.json": "23178713695526e616571b0619c21272e431a893007a9e3fe21484a49515d35b"
+  }
+}

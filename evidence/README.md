@@ -9,3 +9,5 @@ The research and full-data training records in this directory are unchanged snap
 All 30 confirmation runs and both inference policies are represented in `research_logs/`. Their full training reproduction workflow is preserved on the public `main` archive branch. Recompute their saved prediction counts using `verify.py` or the executed notebook in this branch.
 
 No private messages, raw course images, credentials or training caches are included.
+
+`development/` adds numeric records from the earlier baseline, augmentation, sampling, architecture, training and combination studies for the expanded report. It contains source hashes and original acceptance records; these are historical experiments, not new training performed for this report revision.

@@ -4,7 +4,7 @@
 
 This is the model used for the second Kaggle submission: **87.90% public accuracy (0.87900)**, **2,436,346 trainable parameters**. The submitted CSV was downloaded from Kaggle and matched byte for byte. The private leaderboard score is not recorded.
 
-[Project report (3 pages)](report.pdf) · [Executed review notebook](review.ipynb) · [Submitted CSV](submissions/01_RECOMMENDED_full50k_tta/submission.csv)
+[Project report (8 pages)](report.pdf) · [Executed review notebook](review.ipynb) · [Submitted CSV](submissions/01_RECOMMENDED_full50k_tta/submission.csv)
 
 The final model is a 3x widened ResNet-20 trained from scratch on all 50,000 permitted images for 240 epochs, seed 42. It uses BlurPool, Cutout, small rotations, dropout and stochastic depth. Inference averages probabilities from the original image and its horizontal mirror. It uses one checkpoint, no external training data or pretrained weights.
 
@@ -95,3 +95,14 @@ The checked-in notebook is already executed. It prints the final public accuracy
 The clean code was checked against the original initialization, forward/backward computation, augmentation and first complete training epoch. CPU replay reproduced every submitted prediction. The 240-epoch training run itself was not repeated during cleanup. Historical research entry points and earlier deliveries remain in the repository's [main archive branch](https://github.com/Zihan-Xu/DL-project1/tree/main); this standalone branch is the submitted model, not the later third-version ensemble. The original 30-run training workflow is retained in [the archived v2 instructions](https://github.com/Zihan-Xu/DL-project1/tree/main/tasks/2026-11-06_long111_full50k_v2#reproduce-research-comparisons).
 
 See [REFERENCES.md](REFERENCES.md) for cited methods and [evidence/README.md](evidence/README.md) for provenance. The release manifest covers the exact delivered files.
+
+## Expanded report
+
+The eight-page report includes the initial baseline and width sweep, augmentation and paired fine-tuning, all three systematic research categories, combination experiments, final confirmation, full-data training and the verified competition result. Figures and references are included within eight pages.
+
+Numeric source records are in `evidence/development/`; the executed notebook recomputes all development summary means and sample standard deviations. The model and both prediction versions are unchanged. To rebuild the report:
+
+```bash
+python -m pip install -r requirements-report.txt
+python report_source.py --data-root . --output rebuilt_report.pdf
+```

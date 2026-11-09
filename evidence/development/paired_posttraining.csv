@@ -1,0 +1,4 @@
+arm,epoch,validation_correct,validation_accuracy,checkpoint_sha256
+parent,64,4672,0.9344,aa64543eba16b580a5a6f6bb8b88d31afeff1156eefcd7bd7b62f8e948b0d02a
+A_sft,1,4664,0.9328,0e98e8d6267c4ebb0aa0a35436ccd7e3f419a8156e5db3f2536112bb99463cff
+B_supcon,1,4655,0.931,e62d6b67f8db9721985ee612a9eb1d98c99b494613a5bc393d83cd4c779304dc

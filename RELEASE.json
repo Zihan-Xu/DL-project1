@@ -25,7 +25,8 @@
   "submission_sha256": "f25fd0618bf2784593ca29a875839eb6e08160a58db66adf7f9c02afc5c31996",
   "report_revision": {
     "date": "2026-11-08",
-    "pages": 3,
-    "sha256": "690cd84e21306e81e69d1f5b87be9e940d53d28d446631b8399faaa9d16413ab"
+    "pages": 8,
+    "sha256": "d49d183973e671014e1b73f10c141c4f6969843f1d87842082c255cd9426923c",
+    "scope": "Expanded account of completed experiments; unchanged submitted-v2 model and predictions"
   }
 }
