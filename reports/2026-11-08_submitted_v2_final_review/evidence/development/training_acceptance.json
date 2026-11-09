@@ -1,0 +1,36 @@
+{
+  "at_utc": "2026-11-05T20:45:25.442917+00:00",
+  "passed": true,
+  "configs": 34,
+  "complete_outputs": 120,
+  "physical_trajectories": 107,
+  "planned_seeds_complete": true,
+  "summary_mean_sd_recomputed": true,
+  "paired_means_signs_recomputed": true,
+  "best_checkpoint_hashes_verified": true,
+  "paired_records": 110,
+  "common_epoch_pairs": 8800,
+  "primary_comparisons": 32,
+  "holm_positive_configs": [
+    "kd_t4",
+    "wd0003",
+    "wd0005"
+  ],
+  "deduplicated_training_hours": 10.66221157955566,
+  "deduplicated_recorded_component_hours": 12.514461057083711,
+  "training_epochs": 9280,
+  "optimizer_updates": 2942080,
+  "training_view_presentations": 400000000,
+  "sha256": {
+    "REPORT.md": "480871545a007ee1c548c0891e4baa2f1183bbd0a6b1176dc8165154aa550238",
+    "summary.csv": "cd42b768844871efd382bd3bb439e0a5a2705ae0f1d7013285e7f63fe4ee9cc4",
+    "comparisons.csv": "4cb91cb60b2c7c76eab0288f083d27b42f75c8e03583d489d4f316e7f24479e7",
+    "secondary_comparisons.csv": "45629755e248fd776b4e392330f995d8718341f21cbd85586e00f379bbb07868",
+    "per_seed_metrics.csv": "c14175b0faf45fe98b547accdae124cac18da98274f9e1a3affe5b619108799b",
+    "report_audit.json": "6a3ab38db4c17e50fbef2e1ca002c7cb74b90da80037f9198193785213c67eb7",
+    "pairing_audit.json": "e37a7f604281ec11c982112ac9e971d028e0f233888b9a400911396d52db37ca",
+    "recovery_audit_2026-11-05T203800_807225+0000.json": "0676e9c5e061b7624e30c4f214a4eb6514cf007d050e47245ad0d129161dcba2",
+    "runtime_io_revision_20261105.json": "95f036df8b3e54bbea7cecd1f254b1667b7a6c3964e9d2b2ecd3ef3bead0b73b",
+    "finalize_report.py": "29dfada932c2327f815900536b4aeb932cbabc3b640881992a6abd05c3e2b5ba"
+  }
+}

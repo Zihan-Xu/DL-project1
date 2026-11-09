@@ -13,7 +13,8 @@ This `main` branch preserves the experiment history and immutable deliveries. Th
 
 | Archived delivery | Role |
 |---|---|
-| [Expanded report](reports/2026-11-08_submitted_v2_detailed/) | Current eight-page course report |
+| [Final report review](reports/2026-11-08_submitted_v2_final_review/) | Current eight-page report, checked against the assignment and second submission |
+| [Expanded report](reports/2026-11-08_submitted_v2_detailed/) | Earlier expanded report revision |
 | [Plain report revision](reports/2026-11-08_submitted_v2_plain/) | Earlier three-page revision |
 | [Submitted v2, clean delivery](tasks/2026-11-07_submitted_v2_clean_v1/) | Standalone code and final report for the actual second submission |
 | [Original v2 full50k](tasks/2026-11-06_long111_full50k_v2/) | Original frozen code, evidence and pre-score report |
