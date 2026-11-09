@@ -1,0 +1,15 @@
+{
+  "at_utc": "2026-11-05T11:21:41.065020+00:00",
+  "completed_runs": 42,
+  "expected_runs": 42,
+  "final": true,
+  "passed": true,
+  "missing_runs": [],
+  "checked": [
+    "artifact hashes",
+    "epoch count and exposure budget",
+    "best correct/earliest tie",
+    "prediction rows and confusion",
+    "matched seed augmentation plans"
+  ]
+}

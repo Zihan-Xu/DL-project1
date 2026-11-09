@@ -1,0 +1,90 @@
+{
+  "width.csv": {
+    "project_source": "experiments/width_sweep/comparison.csv",
+    "sha256": "ac0d40f149bea5841e29db4f4ec4e1087762ad236e8ac1d609745c815a454a5b"
+  },
+  "augmentation.csv": {
+    "project_source": "output/augmentations/comparison.csv",
+    "sha256": "527addf8be1023b9a9df69dead1c414d04d5b0098253e29ad40126aceca4b48c"
+  },
+  "paired_posttraining.csv": {
+    "project_source": "experiments/paired_posttraining/comparison.csv",
+    "sha256": "57816044e43bb9a182e97b20f373c2b7630208b292bdc21f160f78f88e2160a4"
+  },
+  "color_tone.csv": {
+    "project_source": "experiments/balanced_sampling/color_tone/comparison.csv",
+    "sha256": "f41eee06b72a3f0a0c85d68d0d1b28bbeed5e0316ea32e7da3a8555b36bea26a"
+  },
+  "architecture_summary.csv": {
+    "project_source": "experiments/research_sweep/architecture/summary.csv",
+    "sha256": "74e56ba730e5dab8786cf6269fae84510627484fbed6cafba0e2315b134da255"
+  },
+  "architecture_comparisons.csv": {
+    "project_source": "experiments/research_sweep/architecture/comparisons.csv",
+    "sha256": "4d26822516e72a38b5017c3cb5c3e222bcb05615310e34956c44253b9131c4d2"
+  },
+  "architecture_runs.csv": {
+    "project_source": "experiments/research_sweep/architecture/run_metrics.csv",
+    "sha256": "6904e2e5af4b8990af544744bebb15309b3e999de3f145cc4be35e8af0de99f1"
+  },
+  "architecture_acceptance.json": {
+    "project_source": "experiments/research_sweep/architecture/report_validation.json",
+    "sha256": "d7a7dddedbb73e00fbaa3f612c452ff3f7f0f9fa771d2c8ff174a7af8ed75fbe"
+  },
+  "data_summary.csv": {
+    "project_source": "experiments/research_sweep/data/configuration_summary.csv",
+    "sha256": "e5b650ba5af50846ecfc8f5c4d157709fd63f01d39100e04048925227addedec"
+  },
+  "data_comparisons.csv": {
+    "project_source": "experiments/research_sweep/data/comparisons.csv",
+    "sha256": "18414e2857e2033106037eb87ad2440aff79e754221b707386805e71f94e3a51"
+  },
+  "data_runs.csv": {
+    "project_source": "experiments/research_sweep/data/summary.csv",
+    "sha256": "b10b909261c2b8c4a8f8e20ac440845aab8fa849bd2d86b6aa9cd5d9d4b3ca82"
+  },
+  "data_acceptance.json": {
+    "project_source": "experiments/research_sweep/data/final_review.json",
+    "sha256": "2c8faa60176892a31b9d4c2323f639daa3b9e558117d92d5e2207992caa7978d"
+  },
+  "training_summary.csv": {
+    "project_source": "experiments/research_sweep/training/summary.csv",
+    "sha256": "cd42b768844871efd382bd3bb439e0a5a2705ae0f1d7013285e7f63fe4ee9cc4"
+  },
+  "training_comparisons.csv": {
+    "project_source": "experiments/research_sweep/training/comparisons.csv",
+    "sha256": "4cb91cb60b2c7c76eab0288f083d27b42f75c8e03583d489d4f316e7f24479e7"
+  },
+  "training_runs.csv": {
+    "project_source": "experiments/research_sweep/training/per_seed_metrics.csv",
+    "sha256": "c14175b0faf45fe98b547accdae124cac18da98274f9e1a3affe5b619108799b"
+  },
+  "training_acceptance.json": {
+    "project_source": "experiments/research_sweep/training/FINAL_VERIFICATION.json",
+    "sha256": "0f46cd766e476774e9db3ca2154ea5907c803354a1b3f4fc8f704d51a35f9e6f"
+  },
+  "combination_summary.csv": {
+    "project_source": "experiments/research_sweep/combinations/summary.csv",
+    "sha256": "a9d1454e154ca418b17aca5a299963c39a84a9bb26198d03caec76413aea57c3"
+  },
+  "combination_runs.csv": {
+    "project_source": "experiments/research_sweep/combinations/run_metrics.csv",
+    "sha256": "65f8cb2a68ff7b7f6b02f5a3906e0127f469245cfd08327774552d97ae71fa6b"
+  },
+  "combination_acceptance.json": {
+    "project_source": "experiments/research_sweep/combinations/ACCEPTANCE.json",
+    "sha256": "57d37c11870325284be29838c9669089e7931d5386a9c80799044b6e088cd5b3"
+  },
+  "combination_replay.json": {
+    "project_source": "experiments/research_sweep/combinations/REPLAY_ACCEPTANCE.json",
+    "sha256": "20aa426a717bda8ed2fa354821657e762b165ecb7264563f5737eb29c0ba598f"
+  },
+  "rotation90_training.csv": {
+    "project_source": "experiments/rotation90_training/comparison.csv",
+    "sha256": "0055f59cfd703a99121b5d9f1e1f34244d13427f6bdf2000cdb3a86fdf518f67"
+  },
+  "rotation_flip_tta.json": {
+    "project_source": "delivery_reports/rotation_flip_tta_20261106/results.json",
+    "sha256": "96b715ef9fd403e5dd2033d5489ba2d530cd52aa3a0b2358e2f4027baa1170e6"
+  }
+}
