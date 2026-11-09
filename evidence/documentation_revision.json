@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-08",
+  "language": "English",
+  "base_commit": "c546dc1ab8e586bbffba663c820d3390290e9346",
+  "scope": "English documentation and translated interpretation text; no model, prediction or numeric-result changes",
+  "editions": [
+    {
+      "path": "evidence/development/data_comparisons.csv",
+      "original_sha256": "18414e2857e2033106037eb87ad2440aff79e754221b707386805e71f94e3a51",
+      "current_sha256": "0a25acbdf25fcc20044a4e40c2dad46d824d2531e8553174e020312d29eac088",
+      "original_url": "https://github.com/Zihan-Xu/DL-project1/blob/c546dc1ab8e586bbffba663c820d3390290e9346/evidence/development/data_comparisons.csv",
+      "change": "Translated interpretation text; all 24 rows and all other fields unchanged"
+    },
+    {
+      "path": "evidence/confirmation_REPORT.md",
+      "original_sha256": "2a1f4fbf348005a72ddd8eeb181d9f97ba79d3823ef02b58ad8d29508ba12e29",
+      "current_sha256": "ef4989e1a1c76eb25393718c688d330cea210883698de97d848f3d0001a61458",
+      "original_url": "https://github.com/Zihan-Xu/DL-project1/blob/c546dc1ab8e586bbffba663c820d3390290e9346/evidence/confirmation_REPORT.md",
+      "change": "English edition; all 10 configuration, 20 policy and 34 comparison table rows regenerated from unchanged CSV records"
+    }
+  ],
+  "historical_acceptance_hashes": "Original acceptance JSON files retain their original source hashes. Current English-edition hashes appear here and in the release manifest."
+}

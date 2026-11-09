@@ -37,7 +37,10 @@
   },
   "data_comparisons.csv": {
     "project_source": "experiments/research_sweep/data/comparisons.csv",
-    "sha256": "18414e2857e2033106037eb87ad2440aff79e754221b707386805e71f94e3a51"
+    "sha256": "0a25acbdf25fcc20044a4e40c2dad46d824d2531e8553174e020312d29eac088",
+    "original_sha256": "18414e2857e2033106037eb87ad2440aff79e754221b707386805e71f94e3a51",
+    "original_url": "https://github.com/Zihan-Xu/DL-project1/blob/c546dc1ab8e586bbffba663c820d3390290e9346/evidence/development/data_comparisons.csv",
+    "presentation_change": "English translation of interpretation column only; every other field is byte-for-byte identical after CSV parsing"
   },
   "data_runs.csv": {
     "project_source": "experiments/research_sweep/data/summary.csv",

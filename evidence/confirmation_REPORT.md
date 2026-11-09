@@ -1,110 +1,112 @@
-# 新种子组合复验报告
+# Confirmation study: seeds 142-144
 
-## 完整结论与后续判断
+This English edition describes the completed confirmation study. All result tables are regenerated from the accompanying CSV files. The [original report](https://github.com/Zihan-Xu/DL-project1/blob/c546dc1ab8e586bbffba663c820d3390290e9346/evidence/confirmation_REPORT.md) remains available in the earlier commit; translation provenance is recorded in [documentation_revision.json](documentation_revision.json).
 
-30/30条真实训练、3360轮、30个固定checkpoint的TTA结果全部完成；完整CPU核验及独立GPU回放均通过。30个checkpoint的原图和水平翻转FP32 logits逐值一致。原图与TTA各150,000行预测都对应同一5000张验证图，不是300,000张独立样本。原233份研究及86条绑定轨迹的冻结产物保持不变。
+## Design and completion
 
-- **按预定规则选择 long_111 / TTA，验证均值96.0400%，SD 0.1510个百分点，n=3。** seed142/143/144分别为96.06%、95.88%、96.18%（4803/4794/4809个正确，共同分母5000）。配方是在BlurPool+Cutout12+WD5e-4上加旋转±10°、Dropout .1、随机深度 .1，训练240轮；固定原图最佳checkpoint，再平均原图和水平翻转的softmax概率。参数2,436,346，TTA为872,206,080 MAC/图。这是20个已测方案的均值排名，不是总体最优证明。
-- **全组合在两个训练预算下均有最高原图均值。** 80轮全组合95.4400%，相对基本绑定94.8267%为+0.6133pp，未校正95%配对t区间[0.3139,0.9128]，Holm p=0.39167。240轮全组合原图95.9667%，相对80轮全组合+0.5267pp，区间[0.2816,0.7717]，Holm p=0.36786；相对240轮基本绑定+0.5400pp，区间[-0.3390,1.4190]，Holm p=1。
-- **TTA的额外收益很小且不确定。** 对选定长训练配方，TTA相对原图仅+0.0733pp，区间[-0.3962,0.5429]，Holm p=1，两个种子提高、一个下降。TTA不增加参数，但前向次数和MAC翻倍。原图推理均值95.9667%、SD 0.0503pp，是低推理成本备选；本次按事前准确率优先规则固定TTA，不根据部署seed42或local_test成绩改选。TTA平均NLL为0.12230，原图为0.13885；平均最差类召回分别91.333%和91.733%，并非每项指标都改善。
-- **少种子和多重探索仍限制结论。** 本轮34项预注册比较没有一项在统一Holm校正后达到0.05；所有四项析因交互区间均跨零。不能把单因素收益相加，也不能把未见显著差异写成等效。相同验证集、逐轮选优及先前探索筛选均有选择偏差。
-- **训练成本明确增加。** 240轮全组合平均训练及逐轮验证1688.3秒（28.14分钟），约为80轮全组合的3.04倍；本轮已记录训练及验证合计6.2502 GPU小时，不含共享队列等待、独立验收和部署拟合。80轮全组合TTA均值为95.6600%，可作为训练预算较紧时的备选。正式训练失败事件为0；共享GPU正常排队记录保存在reporting/checks。
+The study completed all 30 planned training runs, 3,360 epochs and both inference policies for each saved checkpoint. Every configuration used 40,000 training images and the same 5,000 validation images. Seeds were 142, 143 and 144. The core recipe was the 3x ResNet-20 with BlurPool, Cutout 12 and weight decay 0.0005.
 
-**后续必要性判断：现在不再追加比较训练。** 已补齐最有证据支持的三种因素的全部短预算组合、基本/全组合长训练对照及固定TTA比较。全组合在两个预算下均领先，没有出现需要立即展开长训练部分组合网格的排名冲突；不因小n区间宽而追加种子直到显著，也不继续穷举低收益剂量。优先完成今晚提交准备。下一步只按固定seed42拟合一次选定配方，属于部署拟合，不计入本轮n=3。以后有明确用户新任务或新的已验收重要证据时再评估。机器可读依据见FOLLOWUP_DECISION.json。
+In configuration names, R, D and S indicate rotation within +/-10 degrees, dropout 0.1 and maximum residual drop 0.1. The eight confirm_RDS configurations used 80 epochs. The two long_RDS configurations used 240 epochs. A 1 enables a factor; a 0 disables it. All models have 2,436,346 trainable parameters.
 
-统计数值修订只将“先把整数正确数线性组合、再换算百分点”用于派生比较。修订前后34项Holm判定和所选配置/推理策略均不变，Holm p最大绝对变化约9.1e-14；原始训练和预测未改写。修订前后归档及实际影响见statistics_numerics/。本报告保留全部配置、逐seed结果和34项比较。
+Checkpoints were selected by raw validation accuracy, with earlier epochs winning ties. Horizontal-flip test-time augmentation (TTA) then averaged the softmax probabilities from the original and mirrored image at that same checkpoint. The independent replay reproduced FP32 original and flipped logits for all 30 checkpoints. The 150,000 raw and 150,000 TTA prediction rows reuse the same 5,000 images; they are not 300,000 independent samples.
 
-全部30项训练及TTA已完成，并通过独立验收。
+## Selection and findings
 
-本轮固定BlurPool+Cutout12+WD5e-4，confirm_RDS依次表示旋转10度、Dropout.1、随机深度.1；long为240轮，其余80轮。新seed142–144，各配置3次，固定40000训练/5000验证。原图最佳轮次固定后才比较TTA，后者是原图和水平翻转的等权softmax概率平均。
+The specified selection rule chose **long_111 with TTA**, the highest mean among the 20 configuration/policy candidates. Validation accuracy was **96.0400%**, with seed SD **0.1510 percentage points**. Seeds 142, 143 and 144 obtained 96.06%, 95.88% and 96.18%: 4,803, 4,794 and 4,809 correct predictions out of 5,000. The full-data fit subsequently used the fixed seed 42. No confirmation seed was chosen for having the highest score.
 
-|配置|seed完成/计划|原图均值%|SD/pp|参数|MAC/图|平均训练+验证秒|
-|---|---:|---:|---:|---:|---:|---:|
-|confirm_000|3/3|94.8267|0.1553|2436346|436103040|513.2|
-|confirm_001|3/3|95.0467|0.2139|2436346|436103040|530.2|
-|confirm_010|3/3|95.0800|0.1400|2436346|436103040|521.7|
-|confirm_011|3/3|94.9267|0.1137|2436346|436103040|543.7|
-|confirm_100|3/3|95.1733|0.1206|2436346|436103040|521.2|
-|confirm_101|3/3|95.3133|0.3107|2436346|436103040|543.4|
-|confirm_110|3/3|95.2333|0.2212|2436346|436103040|534.4|
-|confirm_111|3/3|95.4400|0.0600|2436346|436103040|554.8|
-|long_000|3/3|95.4267|0.3443|2436346|436103040|1549.4|
-|long_111|3/3|95.9667|0.0503|2436346|436103040|1688.3|
+At 80 epochs, the complete combination improved raw mean accuracy from 94.8267% to 95.4400%, a paired change of +0.6133 points. Extending the complete combination to 240 epochs added +0.5267 points. At 240 epochs, the complete combination exceeded the core by +0.5400 points. Their adjusted p-values are in the table below; none met the 0.05 threshold.
 
-## 两种推理方案
+For long_111, TTA added +0.0733 points over raw inference. Its paired 95% interval was [-0.3962, 0.5429], with two seeds improving and one declining. TTA doubles forward passes and MACs without adding parameters. Raw inference averaged 95.9667% with seed SD 0.0503 points. TTA improved mean negative log likelihood (NLL) from 0.13885 to 0.12230, but mean worst-class recall declined from 91.733% to 91.333%. It did not improve every metric.
 
-|配置|推理|n|均值%|SD/pp|macro-F1|最差类召回|NLL|推理MAC/图|
-|---|---|---:|---:|---:|---:|---:|---:|---:|
-|confirm_000|raw|3|94.8267|0.1553|0.94825|0.88600|0.17383|436103040|
-|confirm_000|tta|3|95.2333|0.1332|0.95233|0.89800|0.15154|872206080|
-|confirm_001|raw|3|95.0467|0.2139|0.95048|0.89333|0.16784|436103040|
-|confirm_001|tta|3|95.3867|0.2053|0.95388|0.89733|0.14356|872206080|
-|confirm_010|raw|3|95.0800|0.1400|0.95077|0.89067|0.16800|436103040|
-|confirm_010|tta|3|95.2400|0.1058|0.95240|0.89800|0.14724|872206080|
-|confirm_011|raw|3|94.9267|0.1137|0.94926|0.89200|0.16586|436103040|
-|confirm_011|tta|3|95.2667|0.1943|0.95268|0.90200|0.14572|872206080|
-|confirm_100|raw|3|95.1733|0.1206|0.95169|0.89867|0.16084|436103040|
-|confirm_100|tta|3|95.5267|0.1286|0.95525|0.90133|0.14003|872206080|
-|confirm_101|raw|3|95.3133|0.3107|0.95309|0.89600|0.15446|436103040|
-|confirm_101|tta|3|95.5333|0.2603|0.95529|0.90200|0.13783|872206080|
-|confirm_110|raw|3|95.2333|0.2212|0.95231|0.89733|0.15561|436103040|
-|confirm_110|tta|3|95.4667|0.3717|0.95461|0.89933|0.14036|872206080|
-|confirm_111|raw|3|95.4400|0.0600|0.95436|0.89467|0.15296|436103040|
-|confirm_111|tta|3|95.6600|0.0000|0.95657|0.90200|0.13793|872206080|
-|long_000|raw|3|95.4267|0.3443|0.95422|0.89600|0.15083|436103040|
-|long_000|tta|3|95.7333|0.2082|0.95733|0.90600|0.13219|872206080|
-|long_111|raw|3|95.9667|0.0503|0.95966|0.91733|0.13885|436103040|
-|long_111|tta|3|96.0400|0.1510|0.96039|0.91333|0.12230|872206080|
+The 240-epoch complete combination took a mean 1,688.3 seconds for training and per-epoch validation, approximately 3.04 times the 80-epoch complete combination. Recorded training and validation for the entire study totaled 6.2502 GPU hours. Queue waiting, independent acceptance checks and the final full-data fit are excluded. No formal training failures were recorded.
 
-## 全部34项预注册配对比较
+| Configuration | Completed / planned seeds | Raw mean (%) | Seed SD (pp) | Training + validation (s) |
+| --- | --- | --- | --- | --- |
+| confirm_000 | 3 / 3 | 94.8267 | 0.1553 | 513.2 |
+| confirm_001 | 3 / 3 | 95.0467 | 0.2139 | 530.2 |
+| confirm_010 | 3 / 3 | 95.0800 | 0.1400 | 521.7 |
+| confirm_011 | 3 / 3 | 94.9267 | 0.1137 | 543.7 |
+| confirm_100 | 3 / 3 | 95.1733 | 0.1206 | 521.2 |
+| confirm_101 | 3 / 3 | 95.3133 | 0.3107 | 543.4 |
+| confirm_110 | 3 / 3 | 95.2333 | 0.2212 | 534.4 |
+| confirm_111 | 3 / 3 | 95.4400 | 0.0600 | 554.8 |
+| long_000 | 3 / 3 | 95.4267 | 0.3443 | 1549.4 |
+| long_111 | 3 / 3 | 95.9667 | 0.0503 | 1688.3 |
 
-差值为百分点。使用共同新seed，95%t区间未校正，Holm p对24项训练比较与10项TTA比较统一校正。只有完整后才计算Holm；小n、固定验证集、选轮和候选筛选限制外推。
+## Both inference policies
 
-|比较|n|差值pp|95% t CI|Holm p|
-|---|---:|---:|---|---:|
-|confirm_001__vs__confirm_000|3|+0.2200|[-0.1383, +0.5783]|1|
-|confirm_010__vs__confirm_000|3|+0.2533|[-0.3599, +0.8665]|1|
-|confirm_011__vs__confirm_000|3|+0.1000|[-0.3791, +0.5791]|1|
-|confirm_100__vs__confirm_000|3|+0.3467|[-0.3279, +1.0212]|1|
-|confirm_101__vs__confirm_000|3|+0.4867|[+0.1008, +0.8726]|0.87283|
-|confirm_110__vs__confirm_000|3|+0.4067|[-0.5259, +1.3392]|1|
-|confirm_111__vs__confirm_000|3|+0.6133|[+0.3139, +0.9128]|0.39167|
-|long_000__vs__confirm_000|3|+0.6000|[-0.6411, +1.8411]|1|
-|long_111__vs__confirm_111|3|+0.5267|[+0.2816, +0.7717]|0.36786|
-|R_edge_confirm_101_confirm_001|3|+0.2667|[-0.2552, +0.7885]|1|
-|R_edge_confirm_110_confirm_010|3|+0.1533|[-0.4204, +0.7270]|1|
-|R_edge_confirm_111_confirm_011|3|+0.5133|[+0.3065, +0.7202]|0.29433|
-|D_edge_confirm_011_confirm_001|3|-0.1200|[-0.8718, +0.6318]|1|
-|D_edge_confirm_110_confirm_100|3|+0.0600|[-0.2029, +0.3229]|1|
-|D_edge_confirm_111_confirm_101|3|+0.1267|[-0.5479, +0.8012]|1|
-|S_edge_confirm_011_confirm_010|3|-0.1533|[-0.7705, +0.4639]|1|
-|S_edge_confirm_101_confirm_100|3|+0.1400|[-0.9174, +1.1974]|1|
-|S_edge_confirm_111_confirm_110|3|+0.2067|[-0.4418, +0.8551]|1|
-|interaction_RD|3|+0.0267|[-0.0907, +0.1441]|1|
-|interaction_RS|3|+0.1400|[-0.6561, +0.9361]|1|
-|interaction_DS|3|-0.1533|[-0.7123, +0.4056]|1|
-|interaction_RDS|3|+0.4400|[-0.5524, +1.4324]|1|
-|long_111__vs__long_000|3|+0.5400|[-0.3390, +1.4190]|1|
-|interaction_stack_length|3|-0.0733|[-1.2452, +1.0985]|1|
-|confirm_000__tta_vs_raw|3|+0.4067|[+0.1031, +0.7102]|0.80655|
-|confirm_001__tta_vs_raw|3|+0.3400|[+0.1609, +0.5191]|0.43996|
-|confirm_010__tta_vs_raw|3|+0.1600|[-0.1422, +0.4622]|1|
-|confirm_011__tta_vs_raw|3|+0.3400|[-0.0931, +0.7731]|1|
-|confirm_100__tta_vs_raw|3|+0.3533|[+0.2099, +0.4968]|0.29433|
-|confirm_101__tta_vs_raw|3|+0.2200|[+0.0213, +0.4187]|1|
-|confirm_110__tta_vs_raw|3|+0.2333|[-0.2007, +0.6674]|1|
-|confirm_111__tta_vs_raw|3|+0.2200|[+0.0710, +0.3690]|0.69333|
-|long_000__tta_vs_raw|3|+0.3067|[-0.1550, +0.7683]|1|
-|long_111__tta_vs_raw|3|+0.0733|[-0.3962, +0.5429]|1|
+MACs count convolution, linear layers and fixed blur filtering, excluding batch normalization, activations, additions and pooling. Raw inference uses 436,103,040 MACs per image; TTA uses 872,206,080.
 
-## 预定规则选出的候选
+| Configuration | Policy | Seeds | Mean (%) | SD (pp) | Macro F1 | Worst-class recall | NLL | MACs / image |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| confirm_000 | raw | 3 | 94.8267 | 0.1553 | 0.94825 | 0.88600 | 0.17383 | 436,103,040 |
+| confirm_000 | tta | 3 | 95.2333 | 0.1332 | 0.95233 | 0.89800 | 0.15154 | 872,206,080 |
+| confirm_001 | raw | 3 | 95.0467 | 0.2139 | 0.95048 | 0.89333 | 0.16784 | 436,103,040 |
+| confirm_001 | tta | 3 | 95.3867 | 0.2053 | 0.95388 | 0.89733 | 0.14356 | 872,206,080 |
+| confirm_010 | raw | 3 | 95.0800 | 0.1400 | 0.95077 | 0.89067 | 0.16800 | 436,103,040 |
+| confirm_010 | tta | 3 | 95.2400 | 0.1058 | 0.95240 | 0.89800 | 0.14724 | 872,206,080 |
+| confirm_011 | raw | 3 | 94.9267 | 0.1137 | 0.94926 | 0.89200 | 0.16586 | 436,103,040 |
+| confirm_011 | tta | 3 | 95.2667 | 0.1943 | 0.95268 | 0.90200 | 0.14572 | 872,206,080 |
+| confirm_100 | raw | 3 | 95.1733 | 0.1206 | 0.95169 | 0.89867 | 0.16084 | 436,103,040 |
+| confirm_100 | tta | 3 | 95.5267 | 0.1286 | 0.95525 | 0.90133 | 0.14003 | 872,206,080 |
+| confirm_101 | raw | 3 | 95.3133 | 0.3107 | 0.95309 | 0.89600 | 0.15446 | 436,103,040 |
+| confirm_101 | tta | 3 | 95.5333 | 0.2603 | 0.95529 | 0.90200 | 0.13783 | 872,206,080 |
+| confirm_110 | raw | 3 | 95.2333 | 0.2212 | 0.95231 | 0.89733 | 0.15561 | 436,103,040 |
+| confirm_110 | tta | 3 | 95.4667 | 0.3717 | 0.95461 | 0.89933 | 0.14036 | 872,206,080 |
+| confirm_111 | raw | 3 | 95.4400 | 0.0600 | 0.95436 | 0.89467 | 0.15296 | 436,103,040 |
+| confirm_111 | tta | 3 | 95.6600 | 0.0000 | 0.95657 | 0.90200 | 0.13793 | 872,206,080 |
+| long_000 | raw | 3 | 95.4267 | 0.3443 | 0.95422 | 0.89600 | 0.15083 | 436,103,040 |
+| long_000 | tta | 3 | 95.7333 | 0.2082 | 0.95733 | 0.90600 | 0.13219 | 872,206,080 |
+| long_111 | raw | 3 | 95.9667 | 0.0503 | 0.95966 | 0.91733 | 0.13885 | 436,103,040 |
+| long_111 | tta | 3 | 96.0400 | 0.1510 | 0.96039 | 0.91333 | 0.12230 | 872,206,080 |
 
-按预定规则选择（验收通过）：long_111 / tta，均值96.0400%。此为已测候选均值排名，不宣称总体精度确定最优；部署固定seed42，不挑最好seed。
+## All 34 planned comparisons
 
-## 范围和产物
+Changes are measured in percentage points over common seeds. The 95% paired t intervals are unadjusted. Holm p-values correct the 24 training and 10 TTA comparisons together. All seeds were completed before this correction. No comparison passed Holm correction at 0.05, and all four factorial interaction intervals included zero.
 
-未读取local_test或比赛样本进行方案选择。种子重复不创造新的独立图像；CI跨0不是等效。没有按结果增减seed。TTA无新增参数，但推理前向与MAC为2倍。MAC计Conv/Linear和固定Blur，排除BN/激活/加法/池化。训练时间含每轮验证，持锁时间另含I/O。
+| Comparison | Seeds | Mean change (pp) | 95% paired t interval | Holm p |
+| --- | --- | --- | --- | --- |
+| confirm_001__vs__confirm_000 | 3 | +0.2200 | [-0.1383, +0.5783] | 1 |
+| confirm_010__vs__confirm_000 | 3 | +0.2533 | [-0.3599, +0.8665] | 1 |
+| confirm_011__vs__confirm_000 | 3 | +0.1000 | [-0.3791, +0.5791] | 1 |
+| confirm_100__vs__confirm_000 | 3 | +0.3467 | [-0.3279, +1.0212] | 1 |
+| confirm_101__vs__confirm_000 | 3 | +0.4867 | [+0.1008, +0.8726] | 0.87283 |
+| confirm_110__vs__confirm_000 | 3 | +0.4067 | [-0.5259, +1.3392] | 1 |
+| confirm_111__vs__confirm_000 | 3 | +0.6133 | [+0.3139, +0.9128] | 0.39167 |
+| long_000__vs__confirm_000 | 3 | +0.6000 | [-0.6411, +1.8411] | 1 |
+| long_111__vs__confirm_111 | 3 | +0.5267 | [+0.2816, +0.7717] | 0.36786 |
+| R_edge_confirm_101_confirm_001 | 3 | +0.2667 | [-0.2552, +0.7885] | 1 |
+| R_edge_confirm_110_confirm_010 | 3 | +0.1533 | [-0.4204, +0.7270] | 1 |
+| R_edge_confirm_111_confirm_011 | 3 | +0.5133 | [+0.3065, +0.7202] | 0.29433 |
+| D_edge_confirm_011_confirm_001 | 3 | -0.1200 | [-0.8718, +0.6318] | 1 |
+| D_edge_confirm_110_confirm_100 | 3 | +0.0600 | [-0.2029, +0.3229] | 1 |
+| D_edge_confirm_111_confirm_101 | 3 | +0.1267 | [-0.5479, +0.8012] | 1 |
+| S_edge_confirm_011_confirm_010 | 3 | -0.1533 | [-0.7705, +0.4639] | 1 |
+| S_edge_confirm_101_confirm_100 | 3 | +0.1400 | [-0.9174, +1.1974] | 1 |
+| S_edge_confirm_111_confirm_110 | 3 | +0.2067 | [-0.4418, +0.8551] | 1 |
+| interaction_RD | 3 | +0.0267 | [-0.0907, +0.1441] | 1 |
+| interaction_RS | 3 | +0.1400 | [-0.6561, +0.9361] | 1 |
+| interaction_DS | 3 | -0.1533 | [-0.7123, +0.4056] | 1 |
+| interaction_RDS | 3 | +0.4400 | [-0.5524, +1.4324] | 1 |
+| long_111__vs__long_000 | 3 | +0.5400 | [-0.3390, +1.4190] | 1 |
+| interaction_stack_length | 3 | -0.0733 | [-1.2452, +1.0985] | 1 |
+| confirm_000__tta_vs_raw | 3 | +0.4067 | [+0.1031, +0.7102] | 0.80655 |
+| confirm_001__tta_vs_raw | 3 | +0.3400 | [+0.1609, +0.5191] | 0.43996 |
+| confirm_010__tta_vs_raw | 3 | +0.1600 | [-0.1422, +0.4622] | 1 |
+| confirm_011__tta_vs_raw | 3 | +0.3400 | [-0.0931, +0.7731] | 1 |
+| confirm_100__tta_vs_raw | 3 | +0.3533 | [+0.2099, +0.4968] | 0.29433 |
+| confirm_101__tta_vs_raw | 3 | +0.2200 | [+0.0213, +0.4187] | 1 |
+| confirm_110__tta_vs_raw | 3 | +0.2333 | [-0.2007, +0.6674] | 1 |
+| confirm_111__tta_vs_raw | 3 | +0.2200 | [+0.0710, +0.3690] | 0.69333 |
+| long_000__tta_vs_raw | 3 | +0.3067 | [-0.1550, +0.7683] | 1 |
+| long_111__tta_vs_raw | 3 | +0.0733 | [-0.3962, +0.5429] | 1 |
 
-派生统计由final_report.py先组合整数正确数再换算百分点，避免零差值的浮点抵消；冻结训练源码与清单未修改。数值修订证据见statistics_numerics.json。
+## Limits and follow-up decision
 
-PLAN.md、manifest.json、run_metrics.csv、inference_run_metrics.csv、summary.csv、inference_summary.csv、comparisons.csv、paired_seed_differences.csv；各run保留best/last/previous、原始和翻转logits、TTA概率和逐图预测。全部产物与报告审计通过后才改为completed。
+The study used validation results for configuration selection and did not use the historical local-test or competition images for that decision. New training seeds do not create a new test dataset. Reusing one validation split, selecting an epoch and screening candidates can make the selected result optimistic. An interval spanning zero is inconclusive, not evidence of equivalence.
+
+After the planned comparisons finished, the decision was to fit the selected recipe once on all permitted training images with seed 42. No extra seeds were added in pursuit of statistical significance, and no additional long-training factorial grid was run for this selection. This was a ranking among measured candidates, not proof of a globally optimal model.
+
+Derived comparisons were recalculated by combining integer correct counts before converting them to percentage points. This numerical revision changed neither the selected candidate nor any of the 34 Holm decisions; the largest absolute change in an adjusted p-value was approximately 9.1e-14. It did not alter training or predictions.
+
+The numeric records are [confirmation_summary.csv](confirmation_summary.csv), [confirmation_inference_summary.csv](confirmation_inference_summary.csv), [confirmation_comparisons.csv](confirmation_comparisons.csv) and [confirmation_inference_run_metrics.csv](confirmation_inference_run_metrics.csv). Per-image predictions and logs are in [research_logs/](research_logs/). The original training workflow is retained in the [archived v2 release](https://github.com/Zihan-Xu/DL-project1/tree/main/tasks/2026-11-06_long111_full50k_v2).
