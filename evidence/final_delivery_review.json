@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-08",
+  "scope": "Final submission-v2 delivery review; no new model selection or full fit",
+  "course_requirements": {
+    "source": "Deep Learning Project 1, Fall 2026, original three-page assignment",
+    "source_sha256": "191bc89d8a9bcfb0fcb1c0cc616c75b7d7d089de87974832a9ef20f782b5ca5e",
+    "maximum_pages_including_references": 8,
+    "report_pages": 8,
+    "author_and_team": "Zihan Xu",
+    "public_repository_on_page_one": true,
+    "overview_and_findings": "Section 1",
+    "methods_design_pros_cons_and_lessons": "Sections 2-8 and final discussion",
+    "final_accuracy_architecture_parameters": "Sections 1, 8 and 9",
+    "relevant_citations": 13,
+    "documented_reproduction": "Root training, evaluation and prediction code; research/ development workflows",
+    "executed_notebook_with_plots_and_printed_final_metrics": "review.ipynb",
+    "residual_model_below_five_million_parameters": true,
+    "external_training_data_or_pretrained_weights": false,
+    "brightspace_upload": "Report PDF; public code repository linked on its first page",
+    "additional_zip_required_by_assignment": false
+  },
+  "report_quality": {
+    "language": "English",
+    "layout": "Single column; plain black text and tables; 11-point body",
+    "all_eight_rendered_pages_reviewed": true,
+    "clipping_or_overlapping_found": false,
+    "comparisons_use_matched_controls": true,
+    "public_and_validation_scores_distinguished": true
+  },
+  "model": {
+    "configuration": "long_111",
+    "training_images": 50000,
+    "seed": 42,
+    "epochs": 240,
+    "parameters": 2436346,
+    "policy": "horizontal-flip TTA",
+    "sha256": "6ffed5a3b60d34ee7da7f1586984b457b91eb2740e9585163130b3e4cfc57b7c"
+  },
+  "scores": {
+    "kaggle_public_accuracy_percent": 87.9,
+    "kaggle_private_accuracy": null,
+    "research_validation_mean_percent": 96.04,
+    "final_independent_local_accuracy": null
+  },
+  "report_sha256": "8b51094a3087a22398b508a87e45c208342f3bfe6f3cf3b7a953e1f738562b56",
+  "prediction_replay": {
+    "passed": true,
+    "rows": 2000,
+    "unique_ids": 2000,
+    "parameters": 2436346,
+    "policy": "tta",
+    "device": "cpu",
+    "original_pngs_read": 2000,
+    "labels_match_reference": true,
+    "model_sha256": "6ffed5a3b60d34ee7da7f1586984b457b91eb2740e9585163130b3e4cfc57b7c",
+    "submission_sha256": "f25fd0618bf2784593ca29a875839eb6e08160a58db66adf7f9c02afc5c31996"
+  },
+  "development_sources": {
+    "original_files_checked": 36,
+    "entrypoint_help_checks_passed": 10,
+    "summary_adapter_checked_against_historical_outputs": 349,
+    "training_manifest_outputs": 120,
+    "training_manifest_trajectories": 107,
+    "full_research_retraining_performed_during_review": false
+  },
+  "historical_releases_modified": false,
+  "kaggle_or_brightspace_submission_performed": false
+}

@@ -1,0 +1,182 @@
+{
+  "source/model.py": {
+    "project_source": "model.py",
+    "sha256": "8e06052f3d905a6222ada723a4956a3f984ba351e48576a53d878ff0c488a92e",
+    "copy": "exact original file"
+  },
+  "source/prepare_data.py": {
+    "project_source": "prepare_data.py",
+    "sha256": "d7b223c07807083f8c4d2b439b65e49775dd7a3c16f5b553e0f10a37a86ee9c3",
+    "copy": "exact original file"
+  },
+  "source/config.json": {
+    "project_source": "config.json",
+    "sha256": "3daa3c54c7e7f45c235d458f3ccc42b1c1fd4f19dae8cad4071d5f02b6c068d4",
+    "copy": "exact original file"
+  },
+  "source/run_baseline.py": {
+    "project_source": "run_baseline.py",
+    "sha256": "d1a2ba0eacfc10a27123ec932e5c513d1d33f359080c8bc4b506e3e6b23b7f35",
+    "copy": "exact original file"
+  },
+  "source/prepare_backgrounds.py": {
+    "project_source": "prepare_backgrounds.py",
+    "sha256": "57642bee5c44d43d3234d5eda9263eaacb2795bc8fa01fd8a0c404d04fed6ea3",
+    "copy": "exact original file"
+  },
+  "source/run_augmentations.py": {
+    "project_source": "run_augmentations.py",
+    "sha256": "b6db6668ecf6cc5411ecdb103b1378637be6b9fa4d9b1e98fc009dcc6bf6fd5d",
+    "copy": "exact original file"
+  },
+  "source/run_widths.py": {
+    "project_source": "run_widths.py",
+    "sha256": "5ad422d3ef881ac1cbf92cb8f63b6b5882112dfcecd7770a61a3137482b27601",
+    "copy": "exact original file"
+  },
+  "source/run_posttraining.py": {
+    "project_source": "run_posttraining.py",
+    "sha256": "00efac700adbd85952eab40195b56d6ede25f4a47e9184577de68734caa3643e",
+    "copy": "exact original file"
+  },
+  "source/run_color_balance.py": {
+    "project_source": "run_color_balance.py",
+    "sha256": "be5c2623cc73e12492cf39785a1ef83f2bebb04a1b73951bebe176bebc968c60",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/runtime.py": {
+    "project_source": "experiments/research_sweep/runtime.py",
+    "sha256": "15174a7471b7a28919f3fa70a3fb533e27992d8ec77920b3fe00ffc274440376",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/architecture/models.py": {
+    "project_source": "experiments/research_sweep/architecture/models.py",
+    "sha256": "f51f095de9ebdf526b3a4b1ce13f8dd1b52f2adf6fbe62fdfddcd8a50cbe6365",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/architecture/runner.py": {
+    "project_source": "experiments/research_sweep/architecture/runner.py",
+    "sha256": "bea03d7fe2d251f4b2d2d4e6128c1144e30b18d18af18aae48418f36ea0ffd85",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/architecture/durable_runner.py": {
+    "project_source": "experiments/research_sweep/architecture/durable_runner.py",
+    "sha256": "93d06140395a458f181ee81660e91d6812ef5ac9ee3954d50254b0c8d95afa22",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/data/study.py": {
+    "project_source": "experiments/research_sweep/data/study.py",
+    "sha256": "82a6b44b09a45f571f74dd185b21dfd2518fdc7a24aa71339bf75bfc297a699c",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/data/runner.py": {
+    "project_source": "experiments/research_sweep/data/runner.py",
+    "sha256": "bae7b70ed5609c1e88826609cc0252478fc78e614dc5203cf4125933315436b2",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/data/check_prior.py": {
+    "project_source": "experiments/research_sweep/data/check_prior.py",
+    "sha256": "469a4db68fe9e9e3016bfbfa45f9b173211c24f470917605f4fc643f2c5c9d61",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/data/import_prior.py": {
+    "project_source": "experiments/research_sweep/data/import_prior.py",
+    "sha256": "ec97f101a43d568a6c55911c65478f00ade895cfc86b9190b3f1ab2cf512ca1e",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/training/methods.py": {
+    "project_source": "experiments/research_sweep/training/methods.py",
+    "sha256": "1f285e2fa2646a80054097cb8128db9873b831d41a276fadc9d3b9715971c8cc",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/training/register.py": {
+    "project_source": "experiments/research_sweep/training/register.py",
+    "sha256": "4d5cd07b87ba92816416cec782f629f3f503d5ea65b7d07f16edb635072c9344",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/training/preflight.py": {
+    "project_source": "experiments/research_sweep/training/preflight.py",
+    "sha256": "1388e70da1410e4929b348155f9469826160387f3cace6ee358856f00a160d51",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/training/runner.py": {
+    "project_source": "experiments/research_sweep/training/runner.py",
+    "sha256": "af7d9a04cde245f6b877a83404821600850f2104a83e81292bb1eb33b4d45311",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/combinations/methods.py": {
+    "project_source": "experiments/research_sweep/combinations/methods.py",
+    "sha256": "3aacf847e9fbe5d86b7175f241b041e2d60e795f0521d9612c86338bf5c99d4a",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/combinations/register.py": {
+    "project_source": "experiments/research_sweep/combinations/register.py",
+    "sha256": "b916c818448e7e5ade985eaede7c9c0b3a084908b8b759651db9006c26090374",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/combinations/runner.py": {
+    "project_source": "experiments/research_sweep/combinations/runner.py",
+    "sha256": "81fdec223dc6b1c92c8ac3682e2f771e24d2e8352b0c2bd110130174a6734947",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/confirmation/methods.py": {
+    "project_source": "experiments/research_sweep/confirmation/methods.py",
+    "sha256": "3aacf847e9fbe5d86b7175f241b041e2d60e795f0521d9612c86338bf5c99d4a",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/confirmation/register.py": {
+    "project_source": "experiments/research_sweep/confirmation/register.py",
+    "sha256": "fa991a162be91812cfa786b95f1ba8cbede2753a87d2d5ea6a4387778a67eddf",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/confirmation/runner.py": {
+    "project_source": "experiments/research_sweep/confirmation/runner.py",
+    "sha256": "1efd67dc6c85f8adbe39ecafd760afefa097c569569a8dbb54974588ba7c2e3b",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/confirmation/postprocess.py": {
+    "project_source": "experiments/research_sweep/confirmation/postprocess.py",
+    "sha256": "e99522431b935100ca17fdbec22814f9e2d18b8c930040e8339a5b0d9da5b357",
+    "copy": "exact original file"
+  },
+  "source/experiments/rotation90_training/study.py": {
+    "project_source": "experiments/rotation90_training/study.py",
+    "sha256": "e9b72c2f2e4de360cd0417ea1ece4e81163b1e51d6def1617804f336035bd3fd",
+    "copy": "exact original file"
+  },
+  "source/experiments/rotation90_training/replay.py": {
+    "project_source": "experiments/rotation90_training/replay.py",
+    "sha256": "5b566f2e1cdebf46bf859e82af742e857ef11e4b4614295fd5bcb1a3a2007462",
+    "copy": "exact original file"
+  },
+  "source/delivery_tools/audit_rotation_flip_tta.py": {
+    "project_source": "delivery_tools/audit_rotation_flip_tta.py",
+    "sha256": "c48b916af90bebe00681b14be638849a24ec6048589e09f83e869e41d00e88d7",
+    "copy": "exact original file"
+  },
+  "source/experiments/paired_posttraining/pair_review.csv": {
+    "project_source": "experiments/paired_posttraining/pair_review.csv",
+    "sha256": "83b1e3144f082b8be703dac2aee197c53fe0530837e572fd3a0ec5acdff05c21",
+    "copy": "exact original file"
+  },
+  "reference/experiments/width_sweep/3x/resnet20.pt": {
+    "project_source": "experiments/width_sweep/3x/resnet20.pt",
+    "sha256": "aa64543eba16b580a5a6f6bb8b88d31afeff1156eefcd7bd7b62f8e948b0d02a",
+    "copy": "exact original file"
+  },
+  "reference/experiments/width_sweep/comparison.csv": {
+    "project_source": "experiments/width_sweep/comparison.csv",
+    "sha256": "ac0d40f149bea5841e29db4f4ec4e1087762ad236e8ac1d609745c815a454a5b",
+    "copy": "exact original file"
+  },
+  "reference/experiments/width_sweep/selection.json": {
+    "project_source": "experiments/width_sweep/selection.json",
+    "sha256": "c30dd5270228d1f783df84a01c0729e0ef462631db0d26d0c6bb309471b75b54",
+    "copy": "exact original file"
+  },
+  "source/experiments/research_sweep/architecture/checkpoint_io_protocol_v2.json": {
+    "project_source": "experiments/research_sweep/architecture/checkpoint_io_protocol_v2.json",
+    "sha256": "5347efe32b3ce2470c6f2a36d95bdeae670c0e9758706456b003bcca01758c9d",
+    "copy": "exact original file"
+  }
+}

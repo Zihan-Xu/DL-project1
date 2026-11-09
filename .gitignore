@@ -2,6 +2,6 @@ __pycache__/
 *.py[cod]
 .venv/
 .ipynb_checkpoints/
-data/
+/data/
 runs/
 reproduced*.csv

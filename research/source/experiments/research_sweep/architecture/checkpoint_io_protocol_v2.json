@@ -1,0 +1,32 @@
+{
+  "wrapper_sha256": "93d06140395a458f181ee81660e91d6812ef5ac9ee3954d50254b0c8d95afa22",
+  "previous_wrapper_sha256": "34083122e62b13187ee5f2ee47f122670c077a604e28dc2bad603212bea613ef",
+  "numerical_sources": {
+    "models.py": "f51f095de9ebdf526b3a4b1ce13f8dd1b52f2adf6fbe62fdfddcd8a50cbe6365",
+    "runner.py": "bea03d7fe2d251f4b2d2d4e6128c1144e30b18d18af18aae48418f36ea0ffd85"
+  },
+  "effective_after_completed_runs": 11,
+  "failure": "failures/1793845095025122900.json",
+  "verified_at_utc": "2026-11-05T02:19:49.027719+00:00",
+  "policy": "Fsync category JSON, CSV and checkpoints; retry Windows replace errors 5/32/33 for five seconds; shared paths use original writer.",
+  "cpu_tests": {
+    "transient_windows_reader_seconds": 0.381,
+    "persistent_denial_retains_both_files": true
+  },
+  "audited_resume": {
+    "run_id": "blur_seed42",
+    "epoch": 8,
+    "best_correct": 4138,
+    "source": "last.pt",
+    "source_sha256": "6543b370b53b5c087bf5ce821b87111dccf98f589a4d6f9b0c13bc4053ea281a",
+    "optimizer_states": 65,
+    "rngs": [
+      "python",
+      "numpy",
+      "cpu",
+      "cuda",
+      "batch",
+      "augmentation"
+    ]
+  }
+}

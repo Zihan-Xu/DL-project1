@@ -184,7 +184,7 @@ def build(data_root, output):
     )
     h("1. Overview and data preparation")
     p(
-        "My second competition submission achieved <b>87.90% public accuracy</b> with <b>2,436,346 trainable parameters</b>. It uses one modified ResNet-20 trained from scratch on all 50,000 permitted images. Development began with a narrow baseline and progressed through width, augmentation, architecture, data-sampling and optimization studies. BlurPool, Cutout and stronger weight decay formed the core recipe; a separate confirmation study selected small rotations, dropout, residual dropping and longer training. This report follows those experiments and the decisions behind the submitted model."
+        "My second competition submission achieved <b>87.90% accuracy on the Kaggle public test set</b> with <b>2,436,346 trainable parameters</b>. It uses one modified ResNet-20 trained from scratch on all 50,000 permitted images. Development began with a narrow baseline and progressed through width, augmentation, architecture, data-sampling and optimization studies. BlurPool, Cutout and stronger weight decay formed the core recipe; a separate confirmation study selected small rotations, dropout, residual dropping and longer training. This report follows those experiments and the decisions behind the submitted model."
     )
     p(
         "The supplied data contain 50,000 labeled and 2,000 competition images, each 32 x 32 RGB. I checked archive contents, image decoding, IDs, labels and pixel hashes. The audit found no exact duplicate images, conflicting duplicate labels or exact training/competition overlaps. A fixed stratified split, seed 42, allocated 40,000 images to training, 5,000 to validation and 5,000 to a historical local test: 4,000/500/500 per class. Development normalization used training pixels only: RGB mean (0.491882, 0.482736, 0.446956), standard deviation (0.246919, 0.243416, 0.261570)."
@@ -209,7 +209,7 @@ def build(data_root, output):
         [49, 139, 139, 141],
     )
     p(
-        "Widening [2] to 48/96/192 channels gave the best validation result. The 4x model remained under the five-million limit but used about 78% more multiply-accumulates than 3x and did not improve this seed. I retained 3x; its historical local-test accuracy was 93.52%. This was an initial capacity choice from one seed, not evidence that 3x always outperforms 4x."
+        "Widening [2] to 48/96/192 channels gave the best validation result. The 4x model remained under the five-million limit but used about 78% more multiply-accumulates than 3x and did not improve accuracy in this run. I retained 3x; its historical local-test accuracy was 93.52%. This was an initial capacity choice from one seed, not evidence that 3x always outperforms 4x."
     )
 
     page()
@@ -228,7 +228,7 @@ def build(data_root, output):
     }
     aug = [r for r in read_rows(dev / "augmentation.csv") if r["arm"] in aug_names]
     table(
-        "Table 2. Initial single-seed augmentation study; all runs completed 80 epochs.",
+        "Table 2. Initial single-seed augmentation study; all runs completed 80 epochs. pp = percentage points; SD = standard deviation.",
         ["Transformation", "Validation (%)", "Change (pp)"],
         [
             [
@@ -257,7 +257,7 @@ def build(data_root, output):
     page()
     h("4. Systematic architecture and data studies")
     p(
-        "I next registered 34 research directions: eight architecture, twelve data and fourteen training directions. Each configuration used seeds 42-44; designated comparisons also used 45-46. The default was the 3x model, 80 epochs, flip probability 0.5 and no random crop. Each study kept its own matched control and normalization protocol. The sampling study shared training-only subset statistics within each seed. These results should not be read as direct controlled differences from the earlier crop-based width sweep."
+        "I next planned 34 research directions: eight architecture, twelve data and fourteen training directions. Each configuration used seeds 42-44; designated comparisons also used 45-46. The default was the 3x model, 80 epochs, flip probability 0.5 and no random crop. Each study kept its own matched control and normalization protocol. The sampling study shared training-only subset statistics within each seed. The different augmentation protocols prevent a controlled comparison with the earlier width sweep."
     )
     p(
         "Checkpoints maximized correct validation predictions, with ties assigned to the earlier epoch. Comparisons used common seeds only. Paired 95% t intervals measure training variability on this fixed split, not uncertainty over new datasets. Repeated predictions on the same images are not independent observations; exploratory intervals do not automatically correct for multiple comparisons."
@@ -305,10 +305,10 @@ def build(data_root, output):
     page()
     h("5. Optimization and regularization experiments")
     p(
-        "The fourteen training directions covered epoch budget, learning rate and warmup, learning-rate schedule, weight decay, optimizer, batch size, label smoothing, dropout, residual dropping, sharpness-aware minimization (SAM), stochastic weight averaging (SWA), exponential moving averages, supervised contrastive learning and distillation [4, 7-11]. There were 34 configurations and 120 registered outputs, all completed. These came from 107 physical training trajectories because some averaging methods shared a trajectory; counting them as 120 separate trainings would overstate the work."
+        "The fourteen training directions covered epoch budget, learning rate and warmup, learning-rate schedule, weight decay, optimizer, batch size, label smoothing, dropout, residual dropping, sharpness-aware minimization (SAM), stochastic weight averaging (SWA), exponential moving averages (EMA), supervised contrastive learning and distillation [4, 7-11]. There were 34 configurations and 120 registered outputs, all completed. These came from 107 training runs because some averaging methods shared a run; counting each output as a separate run would double-count part of the work."
     )
     p(
-        "Most comparisons changed one setting in the 80-epoch, flip-only 3x recipe. Longer runs used 160 or 240 epochs; batch sizes 64 and 256 were compared with 128. I tried learning rates 0.05 and 0.2, five-epoch warmup, multistep decay and cosine restarts. Optimizer trials included Nesterov SGD and AdamW at two learning rates. The stored records include validation predictions, per-class recalls, model size, compute and timing, so selection was not based on the best scalar in a training log."
+        "Most comparisons changed one setting in the 80-epoch, flip-only 3x recipe. Longer runs used 160 or 240 epochs; batch sizes 64 and 256 were compared with 128. I tried learning rates 0.05 and 0.2, five-epoch warmup, multistep decay and cosine restarts. Optimizer trials included Nesterov SGD and AdamW at two learning rates. The stored records include validation predictions, per-class recalls, model size, compute and timing, so reported accuracy could be checked against saved predictions."
     )
     train = {r["config_id"]: r for r in read_rows(dev / "training_summary.csv")}
     train_cmp = {r["config_id"]: r for r in read_rows(dev / "training_comparisons.csv")}
@@ -380,7 +380,7 @@ def build_remaining(story, p, h, table, page, small, data_root, dev):
         r["configuration"]: r for r in read_rows(dev / "combination_summary.csv")
     }
     table(
-        "Table 5. Core factorial: five-seed mean and sample SD on the shared validation set.",
+        "Table 5. Core factorial: five-seed mean and sample SD on the shared validation set. A 1 enables the factor; a 0 disables it.",
         ["B / C / W", "Mean accuracy (%)", "Seed SD (pp)"],
         [
             [
@@ -445,7 +445,7 @@ def build_remaining(story, p, h, table, page, small, data_root, dev):
     page()
     h("8. Submitted architecture and full-data training")
     p(
-        "The final network has stage widths 48/96/192 and nine residual blocks. At the two stage transitions, a fixed 3 x 3 binomial filter, the outer product of [1, 2, 1] divided by 16, downsamples both paths with reflection padding. A learned 1 x 1 projection matches shortcut channels. Dropout is applied before each block's second convolution. Per-example residual dropping increases linearly from 0.1/9 to 0.1; surviving residuals are rescaled during training. The residual branch is computed before masking, so this implementation does not save training computation by skipping blocks."
+        "The final network has stage widths 48/96/192 and nine residual blocks. At the two stage transitions, a fixed 3 x 3 binomial filter, the outer product of [1, 2, 1] with itself, divided by 16, downsamples both paths with reflection padding. A learned 1 x 1 projection matches shortcut channels. Dropout is applied before each block's second convolution. Per-example residual dropping increases linearly from 0.1/9 to 0.1; surviving residuals are rescaled during training. The residual branch is computed before masking, so this implementation does not save training computation by skipping blocks."
     )
     table(
         "Table 7. Exact recipe for the second submitted checkpoint.",
@@ -511,13 +511,13 @@ def build_remaining(story, p, h, table, page, small, data_root, dev):
     page()
     h("9. Competition result, limitations and reproducibility")
     p(
-        "The second submitted CSV received 87.90% Kaggle public accuracy, compared with 85.00% for the earlier core240/raw submission: a gain of 2.90 percentage points. The architecture recipe, training-set size and inference policy changed together, so this is not a controlled estimate of one method's effect. The private score is not recorded. The 96.04% validation mean belongs to three 40k-trained research models, not the final 50k model, which has no independent local holdout."
+        "The second submission achieved 87.90% accuracy on the Kaggle public test set, compared with 85.00% for the earlier core240/raw submission: a gain of 2.90 percentage points. The regularization settings, training-set size and inference policy changed together, so this is not a controlled estimate of one method's effect. The private score is not recorded. The 96.04% validation mean belongs to three 40k-trained research models, not the final 50k model, which has no independent local holdout."
     )
     p(
-        "The validation/public gap remains unexplained. Repeated selection on one validation split may make its best result optimistic, and the evaluation datasets may differ; hidden labels prevent testing these explanations. The released checkpoint reproduced all 2,000 submitted labels, and the downloaded submitted file matched byte for byte. These checks exclude the export and ordering mistakes tested here, not every possible source of the gap."
+        "The validation/public gap remains unexplained. Repeated selection on one validation split may make its best result optimistic, and the evaluation datasets may differ; hidden labels prevent testing these explanations. The released checkpoint reproduced all 2,000 submitted labels, and the downloaded submitted file matched byte for byte. The replay found no mismatch in the exported labels or their order; it cannot explain the lower public score."
     )
     p(
-        "The repository includes the checkpoint, exact configuration, training/evaluation/inference code, logs, source tables and an executed review notebook. With course data installed as described in the README, run <font name='Courier' size='9'>python predict.py --data-dir data/competition</font> and <font name='Courier' size='9'>python verify.py</font>. The clean code matched the original initialization, forward/backward results, augmentation and first full training epoch; CPU replay matched both raw and TTA predictions. Cleanup did not repeat the full 240-epoch fit. TTA uses two passes, about 872.2 million multiply-accumulates per image, without extra parameters. The main lesson was to verify promising combinations under matched conditions and retain simpler methods when more expensive additions gave uncertain gains."
+        "The repository includes the checkpoint, exact configuration, training/evaluation/inference code, logs, source tables and an executed review notebook. Development training scripts are supplied in the research directory. With course data installed as described in the README, run <font name='Courier' size='9'>python predict.py --data-dir data/competition</font> and <font name='Courier' size='9'>python verify.py</font>. The clean code matched the original initialization, forward/backward results, augmentation and first full training epoch; CPU replay matched both raw and TTA predictions. Cleanup did not repeat the full 240-epoch fit. TTA uses two passes, about 872.2 million multiply-accumulates per image, without extra parameters. The main lesson was to verify promising combinations under matched conditions and retain simpler methods when more expensive additions gave uncertain gains."
     )
     h("References")
     references = [

@@ -26,13 +26,14 @@
   "report_revision": {
     "date": "2026-11-08",
     "pages": 8,
-    "sha256": "d49d183973e671014e1b73f10c141c4f6969843f1d87842082c255cd9426923c",
-    "scope": "Expanded account of completed experiments; unchanged submitted-v2 model and predictions"
+    "sha256": "8b51094a3087a22398b508a87e45c208342f3bfe6f3cf3b7a953e1f738562b56",
+    "scope": "Final requirement and prose review; original submitted-v2 model and predictions unchanged"
   },
   "documentation_revision": {
     "date": "2026-11-08",
     "language": "English",
     "scope": "Expanded repository explanation and English editions of historical text",
     "numeric_results_unchanged": true
-  }
+  },
+  "development_reproduction": "research/README.md"
 }

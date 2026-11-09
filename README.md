@@ -182,6 +182,8 @@ python -m pip install -r requirements-report.txt
 python report_source.py --data-root . --output rebuilt_report.pdf
 ```
 
+The [development reproduction guide](research/README.md) supplies the original training code for the baseline, width, augmentation, paired fine-tuning, architecture, data, training, combination and confirmation studies. It creates separate workspaces and preserves the fixed project-trained teacher and manual background-review decisions.
+
 ## Repository contents
 
 | Path | Contents |
@@ -192,10 +194,11 @@ python report_source.py --data-root . --output rebuilt_report.pdf
 | `predict.py`, `evaluate.py`, `verify.py` | Prediction, independent evaluation and artifact checks |
 | `config.json`, `requirements*.txt` | Exact configuration and dependencies |
 | `report.pdf`, `report_source.py`, `review.ipynb` | Report, its builder and executed review |
+| `research/` | Original development training sources, fixed teacher, input decisions and rerun commands |
 | `evidence/development/` | Earlier study summaries, per-seed metrics and acceptance records |
 | `evidence/research_logs/` | Confirmation training logs and all 60 prediction tables |
 | `submissions/` | The submitted TTA CSV and raw alternative, with hashes and policies |
 
 The default `submission-v2` branch is the course delivery. Earlier releases and research are preserved on the [main archive branch](https://github.com/Zihan-Xu/DL-project1/tree/main), including the [original confirmation training workflow](https://github.com/Zihan-Xu/DL-project1/tree/main/tasks/2026-11-06_long111_full50k_v2#reproduce-research-comparisons). The later third-version experiment is separate from this submitted model.
 
-[REFERENCES.md](REFERENCES.md) follows the report's citation numbering. [evidence/README.md](evidence/README.md) explains score provenance, frozen results and the English editions of historical text. The release manifest records the delivered file hashes.
+[REFERENCES.md](REFERENCES.md) follows the report's citation numbering. [evidence/README.md](evidence/README.md) explains score provenance, frozen results and the English editions of historical text. The release manifest records the delivered file hashes. The [final delivery review](evidence/final_delivery_review.json) maps the report to the course requirements and records a fresh CPU replay of all 2,000 submitted predictions.

@@ -1,0 +1,19 @@
+{
+  "rule": "max validation correct; tie -> smaller width",
+  "split_sha256": "b7567e2b90c9d085a48d643b26615629b727fd4a4cfe25073150d5c7938ea9ca",
+  "selected": {
+    "width": 3,
+    "channels": "48/96/192",
+    "parameters": 2436346,
+    "macs_per_image": 364660608,
+    "best_epoch": 64,
+    "validation_correct": 4672,
+    "validation_n": 5000,
+    "validation_accuracy": 0.9344,
+    "best_epoch_val_loss": 0.2999141216278076,
+    "last_epoch_val_accuracy": 0.9324,
+    "training_seconds": 340.3691403999983,
+    "checkpoint_sha256": "aa64543eba16b580a5a6f6bb8b88d31afeff1156eefcd7bd7b62f8e948b0d02a",
+    "delta_vs_1x_pp": 2.5
+  }
+}
