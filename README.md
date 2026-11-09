@@ -4,7 +4,7 @@
 
 This is the model used for the second Kaggle submission: **87.90% public accuracy (0.87900)**, **2,436,346 trainable parameters**. The submitted CSV was downloaded from Kaggle and matched byte for byte. The private leaderboard score is not recorded.
 
-[Project report](report.pdf) · [Executed review notebook](review.ipynb) · [Submitted CSV](submissions/01_RECOMMENDED_full50k_tta/submission.csv)
+[Project report (3 pages)](report.pdf) · [Executed review notebook](review.ipynb) · [Submitted CSV](submissions/01_RECOMMENDED_full50k_tta/submission.csv)
 
 The final model is a 3x widened ResNet-20 trained from scratch on all 50,000 permitted images for 240 epochs, seed 42. It uses BlurPool, Cutout, small rotations, dropout and stochastic depth. Inference averages probabilities from the original image and its horizontal mirror. It uses one checkpoint, no external training data or pretrained weights.
 
